@@ -1,0 +1,70 @@
+{
+  "color": {
+    "main": {
+      "background-default": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.background-default}"
+      },
+      "background-tinted": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.background-tinted}"
+      },
+      "surface-default": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.surface-default}"
+      },
+      "surface-tinted": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.surface-tinted}"
+      },
+      "surface-hover": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.surface-hover}"
+      },
+      "surface-active": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.surface-active}"
+      },
+      "border-subtle": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.border-subtle}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.border-default}"
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.border-strong}"
+      },
+      "text-subtle": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.text-subtle}"
+      },
+      "text-default": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.text-default}"
+      },
+      "base-default": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.base-default}"
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.base-hover}"
+      },
+      "base-active": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.base-active}"
+      },
+      "base-contrast-subtle": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.base-contrast-subtle}"
+      },
+      "base-contrast-default": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.base-contrast-default}"
+      }
+    }
+  }
+}

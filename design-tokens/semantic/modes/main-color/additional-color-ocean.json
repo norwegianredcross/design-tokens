@@ -1,0 +1,70 @@
+{
+  "color": {
+    "main": {
+      "background-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.background-default}"
+      },
+      "background-tinted": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.background-tinted}"
+      },
+      "surface-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.surface-default}"
+      },
+      "surface-tinted": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.surface-tinted}"
+      },
+      "surface-hover": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.surface-hover}"
+      },
+      "surface-active": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.surface-active}"
+      },
+      "border-subtle": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.border-subtle}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.border-default}"
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.border-strong}"
+      },
+      "text-subtle": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.text-subtle}"
+      },
+      "text-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.text-default}"
+      },
+      "base-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.base-default}"
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.base-hover}"
+      },
+      "base-active": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.base-active}"
+      },
+      "base-contrast-subtle": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.base-contrast-subtle}"
+      },
+      "base-contrast-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.base-contrast-default}"
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+# This workflow automates the process of building, versioning, and publishing
+# your design tokens to NPM, deploying a documentation site to GitHub Pages,
+# and triggering downstream consumer repositories whenever changes are pushed to the main branch.
+
+name: Publish Design Tokens and Deploy to Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # Job 1: Build tokens, publish to NPM, and signal other projects
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to commit version bumps and generated assets
+      pages: write    # Needed to upload the artifact for GitHub Pages
+      id-token: write # Needed for trusted publishing/deployment
+    outputs:
+      changes_detected: ${{ steps.publish_step.outputs.changes_detected }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch all history so that npm version can create commits and tags correctly
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build All Token Artifacts
+        run: npm run build
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit, Version, and Publish to NPM if Changed
+        id: publish_step
+        run: |
+          # Stage the generated build artifacts. Use --force as they might be in .gitignore
+          git add --force design-tokens-build/ dist/
+          
+          # Check if there are any staged changes. If not, the build produced no new output.
+          if git diff --staged --quiet; then
+            echo "No changes in build artifacts. Skipping NPM publish."
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected. Committing and publishing to NPM."
+            # Commit the new assets
+            git commit -m "build: generate new token assets"
+            
+            # Bump the patch version, create a version commit, and tag it
+            npm version patch -m "chore(release): publish new tokens v%s"
+            
+            # Push the commit and the new tag to the repository
+            git push --follow-tags
+            
+            # Publish the new version to NPM
+            npm publish
+            
+            # Set an output variable to notify other steps/jobs that a new version was published
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # This path should match the output directory of your static site generator
+          path: './design-tokens-build'
+
+      # These steps trigger other repositories to update their dependencies.
+      # This is the "fan-out" part of the automation.
+      - name: Trigger rk-designsystem Update
+        if: steps.publish_step.outputs.changes_detected == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: danieltunetek/rk-designsystem
+          event-type: new-design-tokens-version
+
+      - name: Trigger rk-conference-demo Update
+        if: steps.publish_step.outputs.changes_detected == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: danieltunetek/rk-conference-demo
+          event-type: new-design-tokens-version
+
+      - name: Trigger norwegianredcross/DesignSystem Update
+        if: steps.publish_step.outputs.changes_detected == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          # This correctly points to the new project you wanted to add
+          repository: norwegianredcross/DesignSystem 
+          event-type: new-design-tokens-version
+
+  # Job 2: Deploy the artifact to GitHub Pages
+  deploy:
+    needs: publish # This job runs only after the 'publish' job has successfully completed
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an authentic source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

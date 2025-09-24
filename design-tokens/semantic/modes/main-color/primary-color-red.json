@@ -1,0 +1,70 @@
+{
+  "color": {
+    "main": {
+      "background-default": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.background-default}"
+      },
+      "background-tinted": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.background-tinted}"
+      },
+      "surface-default": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.surface-default}"
+      },
+      "surface-tinted": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.surface-tinted}"
+      },
+      "surface-hover": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.surface-hover}"
+      },
+      "surface-active": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.surface-active}"
+      },
+      "border-subtle": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.border-subtle}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.border-default}"
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.border-strong}"
+      },
+      "text-subtle": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.text-subtle}"
+      },
+      "text-default": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.text-default}"
+      },
+      "base-default": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.base-default}"
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.base-hover}"
+      },
+      "base-active": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.base-active}"
+      },
+      "base-contrast-subtle": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.base-contrast-subtle}"
+      },
+      "base-contrast-default": {
+        "$type": "color",
+        "$value": "{color.primary-color-red.base-contrast-default}"
+      }
+    }
+  }
+}

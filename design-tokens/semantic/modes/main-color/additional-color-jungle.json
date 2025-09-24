@@ -1,0 +1,70 @@
+{
+  "color": {
+    "main": {
+      "background-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.background-default}"
+      },
+      "background-tinted": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.background-tinted}"
+      },
+      "surface-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.surface-default}"
+      },
+      "surface-tinted": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.surface-tinted}"
+      },
+      "surface-hover": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.surface-hover}"
+      },
+      "surface-active": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.surface-active}"
+      },
+      "border-subtle": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.border-subtle}"
+      },
+      "border-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.border-default}"
+      },
+      "border-strong": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.border-strong}"
+      },
+      "text-subtle": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.text-subtle}"
+      },
+      "text-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.text-default}"
+      },
+      "base-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.base-default}"
+      },
+      "base-hover": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.base-hover}"
+      },
+      "base-active": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.base-active}"
+      },
+      "base-contrast-subtle": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.base-contrast-subtle}"
+      },
+      "base-contrast-default": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.base-contrast-default}"
+      }
+    }
+  }
+}
