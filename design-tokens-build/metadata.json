@@ -1,5 +1,5 @@
 {
-  "version": "1.0.26",
+  "version": "1.0.27",
   "tokens": {
     "light": {
       "color": {
@@ -49,7 +49,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#d52b1e"
+                  "value": "#1ed687"
                 },
                 "hover": {
                   "value": "#b12419"
