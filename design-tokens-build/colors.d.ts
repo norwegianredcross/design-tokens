@@ -1,24 +1,14 @@
-/* This file is deprecated and will be removed in a future release. Use types.d.ts instead */
-/* build: v1.6.0 */
-import type {} from '@digdir/designsystemet/types';
+import type {} from '@digdir/designsystemet-react/colors';
 
-// Augment types based on theme
-declare module '@digdir/designsystemet/types' {
-  export interface ColorDefinitions {
-    'primary-color-red': never;
-    'secondary-color-orange': never;
-    'secondary-color-rust': never;
-    'secondary-color-pink': never;
-    'additional-color-ocean': never;
-    'additional-color-jungle': never;
+declare module '@digdir/designsystemet-react/colors' {
+  export interface MainAndSupportColors {
+    primary-color-red: never;
+    secondary-color-orange: never;
+    secondary-color-rust: never;
+    secondary-color-pink: never;
+    additional-color-ocean: never;
+    additional-color-jungle: never;
     brand1: never;
     brand2: never;
-    neutral: never;
-  }
-  export interface SeverityColorDefinitions {
-    info: never;
-    success: never;
-    warning: never;
-    danger: never;
   }
 }
