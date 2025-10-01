@@ -1,5 +1,5 @@
 {
-  "version": "1.0.30",
+  "version": "1.0.31",
   "tokens": {
     "semantic": {
       "size": {
@@ -199,7 +199,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#d52b1e"
+                  "value": "#D52B1E"
                 },
                 "hover": {
                   "value": "#b12419"
