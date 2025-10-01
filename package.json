@@ -8,7 +8,7 @@
     "dist/"
   ],
   "scripts": {
-    "build:tokens": "designsystemet tokens build",
+    "build:tokens": "npx @digdir/designsystemet@latest tokens build",
     "build:bootstrap": "node build-bootstrap.js",
     "build:shadcn": "node build-shadcn.js",
     "build:metadata": "node build-metadata.js",
