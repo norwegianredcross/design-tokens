@@ -9,8 +9,8 @@ const postcss = require('postcss');
 // Add to this map as you need to theme more Bootstrap components.
 // ==========================================================================
 const tokenMap = {
-  // Maps --ds-color-primary-base-default to $primary, --bs-primary, etc.
-  'ds-color-primary-base-default': { sassVar: 'primary', cssVar: 'primary' },
+  // Maps --ds-color-brand1-base-default to $primary, --bs-primary, etc.
+  'ds-color-brand1-base-default': { sassVar: 'primary', cssVar: 'primary' },
   'ds-color-neutral-base-default': { sassVar: 'secondary', cssVar: 'secondary' },
   'ds-color-success-base-default': { sassVar: 'success', cssVar: 'success' },
   'ds-color-info-base-default':    { sassVar: 'info', cssVar: 'info' },
@@ -149,4 +149,3 @@ $theme-colors: (
 }
 
 build();
-
