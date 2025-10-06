@@ -9,9 +9,12 @@ const postcss = require('postcss');
 // Add to this map as you need to theme more Bootstrap components.
 // ==========================================================================
 const tokenMap = {
-  // Maps --ds-color-brand1-base-default to $primary, --bs-primary, etc.
-  'ds-color-brand1-base-default': { sassVar: 'primary', cssVar: 'primary' },
-  'ds-color-neutral-base-default': { sassVar: 'secondary', cssVar: 'secondary' },
+  // CORRECTED: Maps to your new primary color token
+  'ds-color-primary-color-red-base-default': { sassVar: 'primary', cssVar: 'primary' },
+
+  // CORRECTED: Maps to your new secondary color token
+  'ds-color-additional-color-ocean-base-default': { sassVar: 'secondary', cssVar: 'secondary' },
+
   'ds-color-success-base-default': { sassVar: 'success', cssVar: 'success' },
   'ds-color-info-base-default':    { sassVar: 'info', cssVar: 'info' },
   'ds-color-danger-base-default':  { sassVar: 'danger', cssVar: 'danger' },
@@ -23,7 +26,7 @@ const tokenMap = {
   'ds-color-neutral-background-default': { sassVar: 'body-bg', cssVar: 'body-bg' },
   'ds-color-neutral-text-default':       { sassVar: 'body-color', cssVar: 'body-color' },
   'ds-color-neutral-border-default':     { sassVar: 'border-color', cssVar: 'border-color' },
-  // Add more mappings here, e.g., for fonts, border-radius, etc.
+
   'ds-font-family': { sassVar: 'font-family-base' },
   'ds-border-radius-default': { sassVar: 'border-radius' },
 };
