@@ -30,7 +30,7 @@
 }
 
 :root {
-  --background: oklch(100.00% 0.0000 0); /* #ffffff */
+  --background: oklch(100.00% 0.0000 0); /* #fff */
   --foreground: oklch(28.91% 0.0000 0); /* #2b2b2b */
   --card: oklch(100.00% 0.0000 0); /* #ffffff */
   --card-foreground: oklch(28.91% 0.0000 0); /* #2b2b2b */
