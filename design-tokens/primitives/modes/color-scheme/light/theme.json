@@ -64,6 +64,10 @@
       "16": {
         "$type": "color",
         "$value": "#ffffff"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#D52B1E"
       }
     },
     "secondary-color-orange": {
@@ -399,67 +403,67 @@
     "brand1": {
       "1": {
         "$type": "color",
-        "$value": "#ffffff"
+        "$value": "#232323"
       },
       "2": {
         "$type": "color",
-        "$value": "#edf5f3"
+        "$value": "#1f1f1f"
       },
       "3": {
         "$type": "color",
-        "$value": "#ffffff"
+        "$value": "#282828"
       },
       "4": {
         "$type": "color",
-        "$value": "#dcece8"
+        "$value": "#2e2e2e"
       },
       "5": {
         "$type": "color",
-        "$value": "#c6dfd9"
+        "$value": "#353535"
       },
       "6": {
         "$type": "color",
-        "$value": "#add2c9"
+        "$value": "#434343"
       },
       "7": {
         "$type": "color",
-        "$value": "#96c5b9"
+        "$value": "#505050"
       },
       "8": {
         "$type": "color",
-        "$value": "#25876f"
+        "$value": "#818181"
       },
       "9": {
         "$type": "color",
-        "$value": "#0b6a53"
+        "$value": "#a8a8a8"
       },
       "10": {
         "$type": "color",
-        "$value": "#0b6a53"
+        "$value": "#a8a8a8"
       },
       "11": {
         "$type": "color",
-        "$value": "#053227"
+        "$value": "#ececec"
       },
       "12": {
         "$type": "color",
-        "$value": "#0D7A5F"
+        "$value": "#ababab"
       },
       "13": {
         "$type": "color",
-        "$value": "#0b644e"
+        "$value": "#969696"
       },
       "14": {
         "$type": "color",
-        "$value": "#084f3d"
+        "$value": "#818181"
       },
       "15": {
         "$type": "color",
-        "$value": "#ebf4f2"
+        "$value": "#919191"
       },
       "16": {
         "$type": "color",
-        "$value": "#ffffff"
+        "$value": "#000000"
       }
     },
     "brand2": {
@@ -531,7 +535,7 @@
     "neutral": {
       "1": {
         "$type": "color",
-        "$value": "#ffffff"
+        "$value": "#fff"
       },
       "2": {
         "$type": "color",
@@ -587,7 +591,7 @@
       },
       "15": {
         "$type": "color",
-        "$value": "#919191"
+        "$value": "#1b1b1b"
       },
       "16": {
         "$type": "color",

@@ -64,6 +64,10 @@
       "16": {
         "$type": "color",
         "$value": "{theme.primary-color-red.16}"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "{theme.primary-color-red.17}"
       }
     },
     "secondary-color-orange": {

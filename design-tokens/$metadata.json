@@ -15,6 +15,7 @@
     "primitives/modes/color-scheme/light/global",
     "primitives/modes/color-scheme/light/theme",
     "themes/theme",
+    "themes/business",
     "semantic/color",
     "semantic/modes/main-color/primary-color-red",
     "semantic/modes/main-color/secondary-color-orange",
