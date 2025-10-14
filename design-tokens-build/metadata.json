@@ -1,5 +1,5 @@
 {
-  "version": "1.0.34",
+  "version": "1.0.35",
   "tokens": {
     "semantic": {
       "size": {
@@ -268,7 +268,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#ea5a2a"
+                  "value": "#ea5a2a",
+                  "static": {
+                    "value": "#ea5a2a"
+                  }
                 },
                 "hover": {
                   "value": "#ef7f5a"
@@ -330,7 +333,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#96171a"
+                  "value": "#96171a",
+                  "static": {
+                    "value": "#96171a"
+                  }
                 },
                 "hover": {
                   "value": "#731214"
@@ -392,7 +398,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#f16670"
+                  "value": "#f16670",
+                  "static": {
+                    "value": "#f16670"
+                  }
                 },
                 "hover": {
                   "value": "#f48a92"
@@ -458,7 +467,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#355770"
+                  "value": "#355770",
+                  "static": {
+                    "value": "#355770"
+                  }
                 },
                 "hover": {
                   "value": "#294457"
@@ -520,7 +532,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#6C733E"
+                  "value": "#6C733E",
+                  "static": {
+                    "value": "#6C733E"
+                  }
                 },
                 "hover": {
                   "value": "#595f33"
@@ -1040,7 +1055,7 @@
         },
         "font": {
           "family": {
-            "value": "Inter"
+            "value": "Source Sans Pro"
           },
           "weight": {
             "medium": {
@@ -1485,7 +1500,7 @@
         },
         "font": {
           "family": {
-            "value": "Inter"
+            "value": "Source Sans Pro"
           },
           "weight": {
             "medium": {
@@ -2000,7 +2015,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#ad431f"
+                  "value": "#ad431f",
+                  "static": {
+                    "value": "#ea5a2a"
+                  }
                 },
                 "hover": {
                   "value": "#8d3619"
@@ -2062,7 +2080,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#d09798"
+                  "value": "#d09798",
+                  "static": {
+                    "value": "#96171a"
+                  }
                 },
                 "hover": {
                   "value": "#c47d7f"
@@ -2124,7 +2145,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#974046"
+                  "value": "#974046",
+                  "static": {
+                    "value": "#f16670"
+                  }
                 },
                 "hover": {
                   "value": "#783338"
@@ -2190,7 +2214,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#8b9fad"
+                  "value": "#8b9fad",
+                  "static": {
+                    "value": "#355770"
+                  }
                 },
                 "hover": {
                   "value": "#a5b4bf"
@@ -2252,7 +2279,10 @@
               },
               "base": {
                 "default": {
-                  "value": "#7d8354"
+                  "value": "#7d8354",
+                  "static": {
+                    "value": "#6C733E"
+                  }
                 },
                 "hover": {
                   "value": "#929870"
