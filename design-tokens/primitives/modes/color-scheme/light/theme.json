@@ -134,6 +134,10 @@
       "16": {
         "$type": "color",
         "$value": "#000000"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#ea5a2a"
       }
     },
     "secondary-color-rust": {
@@ -200,6 +204,10 @@
       "16": {
         "$type": "color",
         "$value": "#ffffff"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#96171a"
       }
     },
     "secondary-color-pink": {
@@ -266,6 +274,10 @@
       "16": {
         "$type": "color",
         "$value": "#000000"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#f16670"
       }
     },
     "additional-color-ocean": {
@@ -332,6 +344,10 @@
       "16": {
         "$type": "color",
         "$value": "#ffffff"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#355770"
       }
     },
     "additional-color-jungle": {
@@ -398,6 +414,10 @@
       "16": {
         "$type": "color",
         "$value": "#ffffff"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#6C733E"
       }
     },
     "brand1": {
@@ -464,6 +484,10 @@
       "16": {
         "$type": "color",
         "$value": "#000000"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#ababab"
       }
     },
     "brand2": {
@@ -530,6 +554,10 @@
       "16": {
         "$type": "color",
         "$value": "#ffffff"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#5B3FA0"
       }
     },
     "neutral": {
@@ -596,6 +624,10 @@
       "16": {
         "$type": "color",
         "$value": "#ffffff"
+      },
+      "17": {
+        "$type": "color",
+        "$value": "#000000"
       }
     }
   }

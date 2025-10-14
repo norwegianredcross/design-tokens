@@ -64,6 +64,10 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.additional-color-ocean.base-contrast-default}"
+      },
+      "base-static": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.base-default-static}"
       }
     }
   }

@@ -134,6 +134,10 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.secondary-color-orange.16}"
+      },
+      "base-default-static": {
+        "$type": "color",
+        "$value": "{color.secondary-color-orange.17}"
       }
     },
     "secondary-color-rust": {
@@ -200,6 +204,10 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.secondary-color-rust.16}"
+      },
+      "base-default-static": {
+        "$type": "color",
+        "$value": "{color.secondary-color-rust.17}"
       }
     },
     "secondary-color-pink": {
@@ -266,6 +274,10 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.secondary-color-pink.16}"
+      },
+      "base-default-static": {
+        "$type": "color",
+        "$value": "{color.secondary-color-pink.17}"
       }
     },
     "additional-color-ocean": {
@@ -332,6 +344,10 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.additional-color-ocean.16}"
+      },
+      "base-default-static": {
+        "$type": "color",
+        "$value": "{color.additional-color-ocean.17}"
       }
     },
     "additional-color-jungle": {
@@ -398,6 +414,10 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.additional-color-jungle.16}"
+      },
+      "base-default-static": {
+        "$type": "color",
+        "$value": "{color.additional-color-jungle.17}"
       }
     },
     "neutral": {

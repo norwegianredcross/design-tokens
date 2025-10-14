@@ -217,6 +217,7 @@
       "color.secondary-color-orange.14": "673ec7ca0156c655a84a13f112e4d3fdda07d5ee",
       "color.secondary-color-orange.15": "f71f4903e1794f7d79db999f55ea0b3d8254f4a8",
       "color.secondary-color-orange.16": "981dc7dec1fcd20c2ba06b668f6ca491460dccfa",
+      "color.secondary-color-orange.17": "7c2d71c7bc933280f52a49a9f9dbc0ab655abebd",
       "color.secondary-color-rust.1": "a073b537feda8adb733fc51306515e220d3bf58b",
       "color.secondary-color-rust.2": "076085564160ef499ab2ca0fb6058922382b4449",
       "color.secondary-color-rust.3": "7585ab8e2e944b1fa7f2e6c357dbd2fbbd0a99ab",
@@ -233,6 +234,7 @@
       "color.secondary-color-rust.14": "26e9982f6f7341989c4f440681684e91851d96a8",
       "color.secondary-color-rust.15": "4555c36f270e6b4325000cc07521d7e34d9c6b15",
       "color.secondary-color-rust.16": "e5c11077da591fccd0be4334e139d152df9fedb4",
+      "color.secondary-color-rust.17": "4d1928a959860fdd743bc6f53d8b849c90ff5b69",
       "color.secondary-color-pink.1": "e10850cbe970a6a13da1d4107522ac5834f98ef5",
       "color.secondary-color-pink.2": "569e10b1a752d4de278f0084d78e2b5144635b06",
       "color.secondary-color-pink.3": "6db3e73d98e5a9f75253e5685e5b9b2db83f2adf",
@@ -249,6 +251,7 @@
       "color.secondary-color-pink.14": "545cb1382e318dedc631814bfa19b12eee1d1c1e",
       "color.secondary-color-pink.15": "ab993ae15925da69ff00f3dba72ad2f70c0d2753",
       "color.secondary-color-pink.16": "c23a9dea8d8619e3508fed2bdd42e2b5254a840c",
+      "color.secondary-color-pink.17": "a77ecc88aeb6eb9c7ef81480d122f02edc8c0c72",
       "color.additional-color-ocean.1": "6ea3932ac0d08f15a5cc0ec6eab55c17945b82e8",
       "color.additional-color-ocean.2": "c29a15eec52610379b8266603b372f11f884b859",
       "color.additional-color-ocean.3": "a83a114a5bde97eab92c3b3cd0d469b58b25badd",
@@ -265,6 +268,7 @@
       "color.additional-color-ocean.14": "194edff20b15d02f8edbb2fd8764316015dad388",
       "color.additional-color-ocean.15": "41d46d126d99b4a49179dea7cde6d140ce78e12e",
       "color.additional-color-ocean.16": "4753f88547efdfa5b23da4c48be9fc6250676c09",
+      "color.additional-color-ocean.17": "382280bd31aa3d227e4e88658ed4c550e4919384",
       "color.additional-color-jungle.1": "7e732c6bd47508bc9af7922d67d1b0c8cd3caf21",
       "color.additional-color-jungle.2": "c0c9bca9031f042d4686d09b594b53f465494c89",
       "color.additional-color-jungle.3": "89b96d2492d505dcc0e5dd043d9fe04db1e82af5",
@@ -281,6 +285,8 @@
       "color.additional-color-jungle.14": "637458c3e6147079eff1df51d10e2234ed925186",
       "color.additional-color-jungle.15": "45c5cf67f2ff55f5b8b83b1e9193ca9d4851ae19",
       "color.additional-color-jungle.16": "6fdc54f3aabdbd3afcebe9240ce3d133a9aff953",
+      "color.additional-color-jungle.17": "7856a2076e55f00e82ec82ec1034820316357db4",
+      "color.neutral.17": "908bd7fac8a94aec6c2f7bef8674e765e529f3bb",
       "color.brand1.1": "4e7a2cccf28d7434b2a17bb6d78cf2c1bbb1b296",
       "color.brand1.2": "7b5699641efb9cf929080d24bf30f7a50a7d88e1",
       "color.brand1.3": "afe9bba76c80085bebf8298e185e8d50e699f281",
@@ -297,6 +303,7 @@
       "color.brand1.14": "d85e7f162c7c9952973bed73b5a349226d278101",
       "color.brand1.15": "2e4c7f9d87c4174013d92b97f52f315d848a8b66",
       "color.brand1.16": "2e502586c66ba698bb1e47435b0f9904c6fc0e0d",
+      "color.brand1.17": "76db333c181fe8326caa0f0b8bc8f8604908e9a9",
       "color.brand2.1": "a60acd2f8f9fa0bfa4939a50f9ba3cc345aa5b12",
       "color.brand2.2": "5042147d8df0b7473e43dd106d7a3c68cc0ba839",
       "color.brand2.3": "3eeac72f058a7e987ecb277673734a2668141399",
@@ -312,7 +319,8 @@
       "color.brand2.13": "e652786110a867c059aff9c6eec9a629a916623c",
       "color.brand2.14": "78078394316e359d9d49cb946563a08497f5d4bf",
       "color.brand2.15": "8fe3d412bab4da03587a0f4f7afe64304a22bb44",
-      "color.brand2.16": "80a6d0769a837c468a8107d71600c78c6f1c0706"
+      "color.brand2.16": "80a6d0769a837c468a8107d71600c78c6f1c0706",
+      "color.brand2.17": "ab9b5dfb824a5e87f0ad156f4d0d674ff9882f50"
     }
   },
   {
@@ -454,6 +462,7 @@
       "theme.primary-color-red.14": "c12688d0d5ca03c60fe84e69309f924b3947ed89",
       "theme.primary-color-red.15": "2b5569c83e672e7be2886655bd02d7968080491f",
       "theme.primary-color-red.16": "5095bac71ccd0f0091b7f94e92d100faea730504",
+      "theme.primary-color-red.17": "f455a2b79c2c2575956a7f41a7fa1509c27222d5",
       "theme.secondary-color-orange.1": "a82ec6487718c667a24e39315444a1b0a4833bde",
       "theme.secondary-color-orange.2": "72209c414ac1d9ba597c00dbc4a9f29d5975073e",
       "theme.secondary-color-orange.3": "2aec4f087d16e798527d6bd932690032d68b032d",
@@ -466,6 +475,7 @@
       "theme.secondary-color-orange.10": "bdee37a84e1eef7da77206a0944eed28bf4a8ba1",
       "theme.secondary-color-orange.11": "455133c0332439a8ef77850192a310a602ff379d",
       "theme.secondary-color-orange.12": "e773fd5a3c9fd2664e43a47804dfad31893bd320",
+      "theme.secondary-color-orange.17": "82e2f13373945bb0432b925404dbba971ceed40e",
       "theme.secondary-color-orange.13": "52869af9e26deadb9e6d8c12195df5cc5a0bc4ab",
       "theme.secondary-color-orange.14": "21b6dea10a487ef542ed4616a4a01c7ea0d6a67d",
       "theme.secondary-color-orange.15": "e48cb8fc798ae6b41cbcb7665764661e1a40d538",
@@ -482,6 +492,7 @@
       "theme.secondary-color-rust.10": "451a771bc15cd363096c25905994f9102f3cd804",
       "theme.secondary-color-rust.11": "a4c7a8c331685d70de48a9181b3b37d8e939df5e",
       "theme.secondary-color-rust.12": "4b026cc2e89cfc4df071fabd070c65b704927641",
+      "theme.secondary-color-rust.17": "b5e36ca91ce40d6cc561687274cb9431949d0ccd",
       "theme.secondary-color-rust.13": "59ced3d2c9e8c7072b310178c9493270cc167ce9",
       "theme.secondary-color-rust.14": "2ac4ce91edb07aabcc94c6e8a29fdb635659a5f6",
       "theme.secondary-color-rust.15": "0b61819519ce77ffe519dde186ac0308121eec35",
@@ -498,6 +509,7 @@
       "theme.secondary-color-pink.10": "6957aef73ebf3309072b2718df7008fa3b2a724e",
       "theme.secondary-color-pink.11": "ae2481e8641878c99569224a5e0392c808606ab4",
       "theme.secondary-color-pink.12": "dac53b394ee2af949d1c6c01f4c4ad7a6d3f5c43",
+      "theme.secondary-color-pink.17": "3ea53662ca3fb50900b9cb8ce9e7f7c8fd8f6678",
       "theme.secondary-color-pink.13": "475558f9b0bdc434f34ddd2a623c3913182e7220",
       "theme.secondary-color-pink.14": "26ec443275417f2836cd1736a6e279968fc8920e",
       "theme.secondary-color-pink.15": "27c275d2b1e4f5688c43ce5f4e8c81c044efb66a",
@@ -514,6 +526,7 @@
       "theme.additional-color-ocean.10": "4ede30c048c27f3e0e4897bacad6aececcd182a8",
       "theme.additional-color-ocean.11": "11ff5372461bfd64be09080ff61382bc781fa355",
       "theme.additional-color-ocean.12": "155786e147b3d75cd71260faab37f7ed184f4730",
+      "theme.additional-color-ocean.17": "4a82c7f3592460284d981af05ff5d02d16dd5573",
       "theme.additional-color-ocean.13": "474c9b4ec1d56593ec3de9e46c5478e2d972b054",
       "theme.additional-color-ocean.14": "e22e7febf2f7a0a25f37f64315bd8a9f6cd68b63",
       "theme.additional-color-ocean.15": "bc60122a55aad5eaa16d2fcc574cf3c0d961c0aa",
@@ -530,6 +543,7 @@
       "theme.additional-color-jungle.10": "9933be056765f4960cf39208f946e9fdb220a25f",
       "theme.additional-color-jungle.11": "8428c569acdc1dce88ecbbdacae55d84ec4cf029",
       "theme.additional-color-jungle.12": "b15f13f16a17b497c3954c2005496353740ab502",
+      "theme.additional-color-jungle.17": "bb154760b51a5e4ed7e09f44842637bb410c463c",
       "theme.additional-color-jungle.13": "ec9335a1ccd1186bbd3ab647fbffabcccd323ea4",
       "theme.additional-color-jungle.14": "3e9d1825ae386dce88802580ed0e20616613b5d8",
       "theme.additional-color-jungle.15": "a166ceeb2e99f1184dffd4302cbf9fc9b292d000",
@@ -550,6 +564,7 @@
       "theme.brand1.14": "5b34edd3e75c9bdc241fc660b9522b446bf5e944",
       "theme.brand1.15": "341b8df3c98a919c251741b782f7163d9f9e0c3f",
       "theme.brand1.16": "9b2d1c02c0c68eec1c375f9ea2a3abaccfc034ab",
+      "theme.brand1.17": "417dc4123c27d36272ce0dc3bda5cf989fdbd796",
       "theme.brand2.1": "90b1d768e2414df0f9e57a97b0e3a1530c80f882",
       "theme.brand2.2": "e1906b154d16e11e04bbc28508a0e15debedda60",
       "theme.brand2.3": "56ed675d0d8c1e139826528a7f180cddcf23997f",
@@ -566,6 +581,7 @@
       "theme.brand2.14": "04df6d3e32babcdae964d3af0611a2d6db020f86",
       "theme.brand2.15": "fca6d4040702f3bf8a34886fd59c2dab3b39e64d",
       "theme.brand2.16": "94653448617eab24ded407dade88ba4be712cf24",
+      "theme.brand2.17": "cb8f11499553564e53db89afb272b038636ee7a6",
       "theme.neutral.1": "12d19b32c4dcaed87e3d9a46f6eef9b61975cf78",
       "theme.neutral.2": "5968a0eba44de3b31da16a2c8a03cf0ab46da13c",
       "theme.neutral.3": "3c718dd51f0b7c8297171949c4a864d57c6ab316",
@@ -581,7 +597,8 @@
       "theme.neutral.13": "58a5b60bbb52ab42f3915367d9e32892c6105a4b",
       "theme.neutral.14": "8cb974d596a945b8532bcfee3624173fcd11812e",
       "theme.neutral.15": "f0ac152be5e6d730b66bfffadd8784077d6b4c03",
-      "theme.neutral.16": "724cb2e99c64778356c52e434ac05a9927301340"
+      "theme.neutral.16": "724cb2e99c64778356c52e434ac05a9927301340",
+      "theme.neutral.17": "0d72141b4e04bb247c947076d779f2c980ffcffb"
     }
   },
   {
@@ -691,6 +708,7 @@
       "theme.primary-color-red.14": "c12688d0d5ca03c60fe84e69309f924b3947ed89",
       "theme.primary-color-red.15": "2b5569c83e672e7be2886655bd02d7968080491f",
       "theme.primary-color-red.16": "5095bac71ccd0f0091b7f94e92d100faea730504",
+      "theme.primary-color-red.17": "f455a2b79c2c2575956a7f41a7fa1509c27222d5",
       "theme.secondary-color-orange.1": "a82ec6487718c667a24e39315444a1b0a4833bde",
       "theme.secondary-color-orange.2": "72209c414ac1d9ba597c00dbc4a9f29d5975073e",
       "theme.secondary-color-orange.3": "2aec4f087d16e798527d6bd932690032d68b032d",
@@ -707,6 +725,7 @@
       "theme.secondary-color-orange.14": "21b6dea10a487ef542ed4616a4a01c7ea0d6a67d",
       "theme.secondary-color-orange.15": "e48cb8fc798ae6b41cbcb7665764661e1a40d538",
       "theme.secondary-color-orange.16": "9cdb5fe5c85747a0329bddf230a7eb05f4894e31",
+      "theme.secondary-color-orange.17": "82e2f13373945bb0432b925404dbba971ceed40e",
       "theme.secondary-color-rust.1": "f0c2cd9d21fcb753189ef53c87c796599c161684",
       "theme.secondary-color-rust.2": "e339b5f9e57184eab294d913066d56150b9b1143",
       "theme.secondary-color-rust.3": "40fcf8febbb3d90ec06c63a56dffe9244331e935",
@@ -723,6 +742,7 @@
       "theme.secondary-color-rust.14": "2ac4ce91edb07aabcc94c6e8a29fdb635659a5f6",
       "theme.secondary-color-rust.15": "0b61819519ce77ffe519dde186ac0308121eec35",
       "theme.secondary-color-rust.16": "e44ab4090a42246177df2d9dd32436e071f162ff",
+      "theme.secondary-color-rust.17": "b5e36ca91ce40d6cc561687274cb9431949d0ccd",
       "theme.secondary-color-pink.1": "ee048dc1e22bf2096d0690fdd7fb3ab217c00189",
       "theme.secondary-color-pink.2": "0ae9f1947e6fceb7e72ae614c67bc7176052e10a",
       "theme.secondary-color-pink.3": "dc697cd88657208c9c1cfddff5e5d33e21eae490",
@@ -739,6 +759,7 @@
       "theme.secondary-color-pink.14": "26ec443275417f2836cd1736a6e279968fc8920e",
       "theme.secondary-color-pink.15": "27c275d2b1e4f5688c43ce5f4e8c81c044efb66a",
       "theme.secondary-color-pink.16": "7fc74e985874980e5b908d8e3f1c7fb2dcc60dd3",
+      "theme.secondary-color-pink.17": "3ea53662ca3fb50900b9cb8ce9e7f7c8fd8f6678",
       "theme.additional-color-ocean.1": "346d37db3cbdacfe8d05ef100d8fb954707517b3",
       "theme.additional-color-ocean.2": "92e46f1bafd099afe73923c54c802fe9b77b58f8",
       "theme.additional-color-ocean.3": "68f9646a1f75cfec0a5c8a7bf7c755330d1ce2b7",
@@ -755,6 +776,7 @@
       "theme.additional-color-ocean.14": "e22e7febf2f7a0a25f37f64315bd8a9f6cd68b63",
       "theme.additional-color-ocean.15": "bc60122a55aad5eaa16d2fcc574cf3c0d961c0aa",
       "theme.additional-color-ocean.16": "f422ca3e3d6be5d53a1098cc41517064c6f77be8",
+      "theme.additional-color-ocean.17": "4a82c7f3592460284d981af05ff5d02d16dd5573",
       "theme.additional-color-jungle.1": "f453999f4341d6af71bb834aa21c52f206588e92",
       "theme.additional-color-jungle.2": "07dc6f5d3620c0ab9631cfe013e2c47172ed8346",
       "theme.additional-color-jungle.3": "c617596161ea461d86d8fecde3204b5de3f8c487",
@@ -771,6 +793,7 @@
       "theme.additional-color-jungle.14": "3e9d1825ae386dce88802580ed0e20616613b5d8",
       "theme.additional-color-jungle.15": "a166ceeb2e99f1184dffd4302cbf9fc9b292d000",
       "theme.additional-color-jungle.16": "6548fb5e938411ecdfdef43ca5144ed568e14879",
+      "theme.additional-color-jungle.17": "bb154760b51a5e4ed7e09f44842637bb410c463c",
       "theme.brand1.1": "5a0a29500ae867c7c19e421b74c690133c48513b",
       "theme.brand1.2": "2a44e0907672acfac0e619c105fca3bcba0b760e",
       "theme.brand1.3": "e0124b8b35b2cb060e8a2d5dc8ea896a4b7a049f",
@@ -787,6 +810,7 @@
       "theme.brand1.14": "5b34edd3e75c9bdc241fc660b9522b446bf5e944",
       "theme.brand1.15": "341b8df3c98a919c251741b782f7163d9f9e0c3f",
       "theme.brand1.16": "9b2d1c02c0c68eec1c375f9ea2a3abaccfc034ab",
+      "theme.brand1.17": "417dc4123c27d36272ce0dc3bda5cf989fdbd796",
       "theme.brand2.1": "90b1d768e2414df0f9e57a97b0e3a1530c80f882",
       "theme.brand2.2": "e1906b154d16e11e04bbc28508a0e15debedda60",
       "theme.brand2.3": "56ed675d0d8c1e139826528a7f180cddcf23997f",
@@ -803,6 +827,7 @@
       "theme.brand2.14": "04df6d3e32babcdae964d3af0611a2d6db020f86",
       "theme.brand2.15": "fca6d4040702f3bf8a34886fd59c2dab3b39e64d",
       "theme.brand2.16": "94653448617eab24ded407dade88ba4be712cf24",
+      "theme.brand2.17": "cb8f11499553564e53db89afb272b038636ee7a6",
       "theme.neutral.1": "12d19b32c4dcaed87e3d9a46f6eef9b61975cf78",
       "theme.neutral.2": "5968a0eba44de3b31da16a2c8a03cf0ab46da13c",
       "theme.neutral.3": "3c718dd51f0b7c8297171949c4a864d57c6ab316",
@@ -818,7 +843,8 @@
       "theme.neutral.13": "58a5b60bbb52ab42f3915367d9e32892c6105a4b",
       "theme.neutral.14": "8cb974d596a945b8532bcfee3624173fcd11812e",
       "theme.neutral.15": "f0ac152be5e6d730b66bfffadd8784077d6b4c03",
-      "theme.neutral.16": "724cb2e99c64778356c52e434ac05a9927301340"
+      "theme.neutral.16": "724cb2e99c64778356c52e434ac05a9927301340",
+      "theme.neutral.17": "0d72141b4e04bb247c947076d779f2c980ffcffb"
     }
   },
   {
@@ -866,6 +892,7 @@
       "color.secondary-color-orange.base-active": "39bada53a2850fb8f23790f4fc3da4ee7591f6c1",
       "color.secondary-color-orange.base-contrast-subtle": "c64a36dd42ad7767f2bed22b0cc0c03690961fd4",
       "color.secondary-color-orange.base-contrast-default": "b5d4214b1afd11160c5fed11db0102aa770d7be8",
+      "color.secondary-color-orange.base-default-static": "c55c709cfff33e80a2abae1b6d0d1488e16f4b34",
       "color.secondary-color-rust.background-default": "e060dd0f7fd9c57d6ebf38b37884549bc661814b",
       "color.secondary-color-rust.background-tinted": "1bcb53c97154c16a12a2dc16d91a61d75ea4fcbb",
       "color.secondary-color-rust.surface-default": "ab524e58d048d614f1ad7227f0a8ae4bf3b50fad",
@@ -882,6 +909,7 @@
       "color.secondary-color-rust.base-active": "dc3e3bd4b80304aa96cfb2fb3b114b60e4d0436d",
       "color.secondary-color-rust.base-contrast-subtle": "32ee4cfd6b7678997fb80bf02d62c5509c79614b",
       "color.secondary-color-rust.base-contrast-default": "5d964a2732a23b8b5b331b5f2a49d802390d091b",
+      "color.secondary-color-rust.base-default-static": "1a1dae288c326e81862fdd055e16a1abeafda472",
       "color.secondary-color-pink.background-default": "2a555a502af66d622b12a575fb5d4a933f26a109",
       "color.secondary-color-pink.background-tinted": "7ed5672b22b778ea8ba91c37f27f7dc4cea9d68b",
       "color.secondary-color-pink.surface-default": "03c3903402db5daf9cc09c1472adf2aeb68a5840",
@@ -898,6 +926,7 @@
       "color.secondary-color-pink.base-active": "1294a958af25391a63b90b81fe94c60670118058",
       "color.secondary-color-pink.base-contrast-subtle": "2d74f9c97253e3953838e4a5d9fb21b2276bad47",
       "color.secondary-color-pink.base-contrast-default": "4b40c6f1a1b5cb4814d533358e4a4754054ee81b",
+      "color.secondary-color-pink.base-default-static": "3e3263f9915e6ccf66dc46402220d99c2a38c3b4",
       "color.additional-color-ocean.background-default": "a81d46fc28ad4df0e3d49888b5a8eff04a4cc830",
       "color.additional-color-ocean.background-tinted": "7f7ae7b036bdd65eca1a0cc9c3296b0c5d30f2e2",
       "color.additional-color-ocean.surface-default": "8f657765d7f24f68a105b44cd727e45f953d1e5e",
@@ -914,6 +943,7 @@
       "color.additional-color-ocean.base-active": "41bcd36fca6abdee54e951dd28b67c963522b394",
       "color.additional-color-ocean.base-contrast-subtle": "9d9de365934616088a80f74c637a82cf33c561ab",
       "color.additional-color-ocean.base-contrast-default": "f3e87d13f1e7084b02243071f72a6dc2c5cf8457",
+      "color.additional-color-ocean.base-default-static": "b2dfb7d0646fbbc0c255b0d37bb07fb0c32f3de3",
       "color.additional-color-jungle.background-default": "1e5fad5451819f4ee54e6126030045a8bbe7506e",
       "color.additional-color-jungle.background-tinted": "e6b07a04cea0754b1b736569fa72ec67c9658a3b",
       "color.additional-color-jungle.surface-default": "8ef473afd93665ffb140fbcf3394f2bfb9677932",
@@ -930,6 +960,7 @@
       "color.additional-color-jungle.base-active": "a607f7c27816d031d7f38c199f5a3ccd9d7394c6",
       "color.additional-color-jungle.base-contrast-subtle": "e65aa8e8d9d1486c627f9e19c684ac002e70f57a",
       "color.additional-color-jungle.base-contrast-default": "7925d58072868eb114d7746b556f2e639b5d430f",
+      "color.additional-color-jungle.base-default-static": "0314f2ba29830ecc51b684fd760e8059f198bcb3",
       "color.neutral.background-default": "e66b842ace0d97df314d5eff2d0aaaa6d54fcacf",
       "color.neutral.background-tinted": "f7c8cf9eb5badbf4b0decba73d9f742a96531a42",
       "color.neutral.surface-default": "b09c9caad36dfbdb6e4735a4a7ba9197568cef80",
@@ -1131,7 +1162,7 @@
       "color.main.base-active": "a1416dd98576bf9853fdd5147f49c7caace03a56",
       "color.main.base-contrast-subtle": "c72a9cd7033d47be6f8e734b3b51850e4c280135",
       "color.main.base-contrast-default": "ec31b2780613fee6442024253c72dd1d04b5e5a8",
-      "color.main.base-default-static": "45077f9aa042d7b4baaaf3bb9b5620243f4f082b"
+      "color.main.base-default-static": "ab227ed29f80dc650de7881319a64b33c31b15d5"
     }
   },
   {
@@ -1159,7 +1190,8 @@
       "color.main.base-hover": "a3114fec0b402951391e9da62994ad9b950ebac7",
       "color.main.base-active": "a1416dd98576bf9853fdd5147f49c7caace03a56",
       "color.main.base-contrast-subtle": "c72a9cd7033d47be6f8e734b3b51850e4c280135",
-      "color.main.base-contrast-default": "ec31b2780613fee6442024253c72dd1d04b5e5a8"
+      "color.main.base-contrast-default": "ec31b2780613fee6442024253c72dd1d04b5e5a8",
+      "color.main.base-static": "19ca09700b900b8deff46a584f856bf2cf9fcc2d"
     }
   },
   {
@@ -1187,7 +1219,8 @@
       "color.main.base-hover": "a3114fec0b402951391e9da62994ad9b950ebac7",
       "color.main.base-active": "a1416dd98576bf9853fdd5147f49c7caace03a56",
       "color.main.base-contrast-subtle": "c72a9cd7033d47be6f8e734b3b51850e4c280135",
-      "color.main.base-contrast-default": "ec31b2780613fee6442024253c72dd1d04b5e5a8"
+      "color.main.base-contrast-default": "ec31b2780613fee6442024253c72dd1d04b5e5a8",
+      "color.main.base-static": "19ca09700b900b8deff46a584f856bf2cf9fcc2d"
     }
   },
   {
@@ -1215,7 +1248,8 @@
       "color.main.base-hover": "a3114fec0b402951391e9da62994ad9b950ebac7",
       "color.main.base-active": "a1416dd98576bf9853fdd5147f49c7caace03a56",
       "color.main.base-contrast-subtle": "c72a9cd7033d47be6f8e734b3b51850e4c280135",
-      "color.main.base-contrast-default": "ec31b2780613fee6442024253c72dd1d04b5e5a8"
+      "color.main.base-contrast-default": "ec31b2780613fee6442024253c72dd1d04b5e5a8",
+      "color.main.base-static": "19ca09700b900b8deff46a584f856bf2cf9fcc2d"
     }
   },
   {

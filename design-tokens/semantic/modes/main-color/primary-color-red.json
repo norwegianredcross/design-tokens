@@ -67,7 +67,7 @@
       },
       "base-default-static": {
         "$type": "color",
-        "$value": "{color.primary-color-red.base-default}"
+        "$value": "{color.primary-color-red.base-default-static}"
       }
     }
   }
