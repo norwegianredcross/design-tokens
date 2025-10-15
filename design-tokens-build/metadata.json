@@ -1,5 +1,5 @@
 {
-  "version": "1.0.35",
+  "version": "1.0.36",
   "tokens": {
     "semantic": {
       "size": {
@@ -199,10 +199,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#D52B1E",
-                  "static": {
-                    "value": "#D52B1E"
-                  }
+                  "value": "#D52B1E"
                 },
                 "hover": {
                   "value": "#b12419"
@@ -268,10 +265,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#ea5a2a",
-                  "static": {
-                    "value": "#ea5a2a"
-                  }
+                  "value": "#ea5a2a"
                 },
                 "hover": {
                   "value": "#ef7f5a"
@@ -333,10 +327,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#96171a",
-                  "static": {
-                    "value": "#96171a"
-                  }
+                  "value": "#96171a"
                 },
                 "hover": {
                   "value": "#731214"
@@ -398,10 +389,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#f16670",
-                  "static": {
-                    "value": "#f16670"
-                  }
+                  "value": "#f16670"
                 },
                 "hover": {
                   "value": "#f48a92"
@@ -467,10 +455,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#355770",
-                  "static": {
-                    "value": "#355770"
-                  }
+                  "value": "#355770"
                 },
                 "hover": {
                   "value": "#294457"
@@ -532,10 +517,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#6C733E",
-                  "static": {
-                    "value": "#6C733E"
-                  }
+                  "value": "#6C733E"
                 },
                 "hover": {
                   "value": "#595f33"
@@ -1905,64 +1887,61 @@
             "red": {
               "background": {
                 "default": {
-                  "value": "#29110e"
+                  "value": "#ffffff"
                 },
                 "tinted": {
-                  "value": "#351612"
+                  "value": "#fcf1f0"
                 }
               },
               "surface": {
                 "default": {
-                  "value": "#431c17"
+                  "value": "#ffffff"
                 },
                 "tinted": {
-                  "value": "#4d201b"
+                  "value": "#fae4e2"
                 },
                 "hover": {
-                  "value": "#59261f"
+                  "value": "#f6d2cf"
                 },
                 "active": {
-                  "value": "#702f27"
+                  "value": "#f2bdb9"
                 }
               },
               "border": {
                 "subtle": {
-                  "value": "#85382e"
+                  "value": "#eeaba6"
                 },
                 "default": {
-                  "value": "#c5665a"
+                  "value": "#da4236"
                 },
                 "strong": {
-                  "value": "#d89890"
+                  "value": "#b42419"
                 }
               },
               "text": {
                 "subtle": {
-                  "value": "#d89890"
+                  "value": "#b42419"
                 },
                 "default": {
-                  "value": "#f7e9e8"
+                  "value": "#57110c"
                 }
               },
               "base": {
                 "default": {
-                  "value": "#dc4f44",
-                  "static": {
-                    "value": "#D52B1E"
-                  }
+                  "value": "#D52B1E"
                 },
                 "hover": {
-                  "value": "#e37168"
+                  "value": "#b12419"
                 },
                 "active": {
-                  "value": "#e9928b"
+                  "value": "#8e1d14"
                 },
                 "contrast": {
                   "subtle": {
-                    "value": "#170807"
+                    "value": "#fdf4f4"
                   },
                   "default": {
-                    "value": "#000000"
+                    "value": "#ffffff"
                   }
                 }
               }
@@ -2015,10 +1994,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#ad431f",
-                  "static": {
-                    "value": "#ea5a2a"
-                  }
+                  "value": "#ad431f"
                 },
                 "hover": {
                   "value": "#8d3619"
@@ -2080,10 +2056,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#d09798",
-                  "static": {
-                    "value": "#96171a"
-                  }
+                  "value": "#d09798"
                 },
                 "hover": {
                   "value": "#c47d7f"
@@ -2145,10 +2118,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#974046",
-                  "static": {
-                    "value": "#f16670"
-                  }
+                  "value": "#974046"
                 },
                 "hover": {
                   "value": "#783338"
@@ -2214,10 +2184,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#8b9fad",
-                  "static": {
-                    "value": "#355770"
-                  }
+                  "value": "#8b9fad"
                 },
                 "hover": {
                   "value": "#a5b4bf"
@@ -2279,10 +2246,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#7d8354",
-                  "static": {
-                    "value": "#6C733E"
-                  }
+                  "value": "#7d8354"
                 },
                 "hover": {
                   "value": "#929870"
