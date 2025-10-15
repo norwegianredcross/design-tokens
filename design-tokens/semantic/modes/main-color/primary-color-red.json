@@ -64,10 +64,6 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.primary-color-red.base-contrast-default}"
-      },
-      "base-default-static": {
-        "$type": "color",
-        "$value": "{color.primary-color-red.base-default-static}"
       }
     }
   }

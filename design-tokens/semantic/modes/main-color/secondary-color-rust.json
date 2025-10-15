@@ -64,10 +64,6 @@
       "base-contrast-default": {
         "$type": "color",
         "$value": "{color.secondary-color-rust.base-contrast-default}"
-      },
-      "base-static": {
-        "$type": "color",
-        "$value": "{color.secondary-color-rust.base-default-static}"
       }
     }
   }
