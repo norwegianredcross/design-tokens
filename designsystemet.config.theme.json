@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/@digdir/designsystemet/dist/config.schema.json",
+  "outDir": "./design-tokens",
+  "themes": {
+    "theme": {
+      "colors": {
+        "main": {
+          "primary-color-red": "#D52B1E",
+          "secondary-color-orange": "#EA5A2A",
+          "secondary-color-rust": "#96171A",
+          "secondary-color-pink": "#F16670",
+          "additional-color-ocean": "#355770",
+          "additional-color-jungle": "#6C733E"
+        },
+        "support": {},
+        "neutral": "#1E1E1E"
+      },
+      "borderRadius": 4
+    }
+  }
+}
+

@@ -8,7 +8,12 @@
     "dist/"
   ],
   "scripts": {
-    "build:tokens": "npx @digdir/designsystemet@latest tokens build",
+    "create:tokens:theme": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.theme.json",
+    "create:tokens:konferansesenter": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.konferansesenter.json",
+    "create:tokens": "npm run create:tokens:theme && npm run create:tokens:konferansesenter",
+    "build:tokens:theme": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.theme.json",
+    "build:tokens:konferansesenter": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.konferansesenter.json",
+    "build:tokens": "npm run build:tokens:theme && npm run build:tokens:konferansesenter",
     "build:bootstrap": "node build-bootstrap.js",
     "build:shadcn": "node build-shadcn.js",
     "build:metadata": "node build-metadata.js",

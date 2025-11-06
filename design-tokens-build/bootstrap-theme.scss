@@ -11,6 +11,7 @@ $black: #000;
 
 // --- Light Theme Static Colors
 $light-primary: #D52B1E;
+$light-secondary: #355770;
 $light-body-bg: #ffffff;
 $light-dark: #ffffff;
 $light-light: #e8e8e8;
@@ -25,6 +26,7 @@ $light-font-family-base: Inter;
 
 // --- Dark Theme Static Colors
 $dark-primary: #dc4f44;
+$dark-secondary: #8b9fad;
 $dark-body-bg: #181818;
 $dark-dark: #282828;
 $dark-light: #2e2e2e;
@@ -70,6 +72,7 @@ $theme-colors: (
 // ==========================================================================
 :root {
   --bs-primary: #{$light-primary};
+  --bs-secondary: #{$light-secondary};
   --bs-body-bg: #{$light-body-bg};
   --bs-dark: #{$light-dark};
   --bs-light: #{$light-light};
@@ -82,6 +85,7 @@ $theme-colors: (
 
   &[data-bs-theme="dark"] {
     --bs-primary: #{$dark-primary};
+    --bs-secondary: #{$dark-secondary};
     --bs-body-bg: #{$dark-body-bg};
     --bs-dark: #{$dark-dark};
     --bs-light: #{$dark-light};

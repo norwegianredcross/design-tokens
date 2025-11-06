@@ -1,0 +1,788 @@
+{
+  "color": {
+    "primary-color-red": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.primary-color-red.16}"
+      }
+    },
+    "secondary-color-orange": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-orange.16}"
+      }
+    },
+    "secondary-color-rust": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-rust.16}"
+      }
+    },
+    "secondary-color-pink": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.secondary-color-pink.16}"
+      }
+    },
+    "additional-color-ocean": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-ocean.16}"
+      }
+    },
+    "additional-color-jungle": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.additional-color-jungle.16}"
+      }
+    },
+    "neutral": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.neutral.16}"
+      }
+    },
+    "info": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.info.16}"
+      }
+    },
+    "success": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.success.16}"
+      }
+    },
+    "warning": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.warning.16}"
+      }
+    },
+    "danger": {
+      "1": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{konferansesenter.danger.16}"
+      }
+    },
+    "link": {
+      "visited": {
+        "$type": "color",
+        "$value": "{konferansesenter.link.visited}"
+      }
+    }
+  },
+  "font-family": {
+    "$type": "fontFamilies",
+    "$value": "{konferansesenter.font-family}"
+  },
+  "font-weight": {
+    "medium": {
+      "$type": "fontWeights",
+      "$value": "{konferansesenter.font-weight.medium}"
+    },
+    "semibold": {
+      "$type": "fontWeights",
+      "$value": "{konferansesenter.font-weight.semibold}"
+    },
+    "regular": {
+      "$type": "fontWeights",
+      "$value": "{konferansesenter.font-weight.regular}"
+    }
+  },
+  "border-radius": {
+    "1": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base}*0.5,{border-radius.scale})"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base},{border-radius.scale}*2)"
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base}*2,{border-radius.scale}*5)"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base}*3,{border-radius.scale}*7)"
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": "{border-radius.base}"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "9999"
+    },
+    "base": {
+      "$type": "dimension",
+      "$value": "4"
+    },
+    "scale": {
+      "$type": "dimension",
+      "$value": "4"
+    }
+  }
+}
