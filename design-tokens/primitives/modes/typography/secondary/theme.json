@@ -2,7 +2,7 @@
   "theme": {
     "font-family": {
       "$type": "fontFamilies",
-      "$value": "Source Sans Pro"
+      "$value": "Inter"
     },
     "font-weight": {
       "medium": {

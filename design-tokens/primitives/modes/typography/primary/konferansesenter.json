@@ -1,5 +1,5 @@
 {
-  "theme": {
+  "konferansesenter": {
     "font-family": {
       "$type": "fontFamilies",
       "$value": "Inter"
