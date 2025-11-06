@@ -11,31 +11,29 @@ $black: #000;
 
 // --- Light Theme Static Colors
 $light-primary: #D52B1E;
-$light-secondary: #355770;
-$light-body-bg: #fff;
+$light-body-bg: #ffffff;
 $light-dark: #ffffff;
 $light-light: #e8e8e8;
 $light-border-color: #797979;
 $light-body-color: #2b2b2b;
-$light-success: #068718;
-$light-danger: #C01B1B;
 $light-info: #0A71C0;
+$light-success: #068718;
 $light-warning: #EA9B1B;
+$light-danger: #C01B1B;
 $light-border-radius: var(--ds-border-radius-base);
-$light-font-family-base: Source Sans Pro;
+$light-font-family-base: Inter;
 
 // --- Dark Theme Static Colors
-$dark-primary: #D52B1E;
-$dark-secondary: #8b9fad;
+$dark-primary: #dc4f44;
 $dark-body-bg: #181818;
 $dark-dark: #282828;
 $dark-light: #2e2e2e;
 $dark-border-color: #818181;
 $dark-body-color: #ececec;
-$dark-success: #138d24;
-$dark-danger: #d76e6e;
 $dark-info: #2d85c9;
+$dark-success: #138d24;
 $dark-warning: #60400b;
+$dark-danger: #d76e6e;
 
 // ==========================================================================
 // Part 2: Map Bootstrap's Sass Variables (Defaulting to Light Theme)
@@ -72,28 +70,26 @@ $theme-colors: (
 // ==========================================================================
 :root {
   --bs-primary: #{$light-primary};
-  --bs-secondary: #{$light-secondary};
   --bs-body-bg: #{$light-body-bg};
   --bs-dark: #{$light-dark};
   --bs-light: #{$light-light};
   --bs-border-color: #{$light-border-color};
   --bs-body-color: #{$light-body-color};
-  --bs-success: #{$light-success};
-  --bs-danger: #{$light-danger};
   --bs-info: #{$light-info};
+  --bs-success: #{$light-success};
   --bs-warning: #{$light-warning};
+  --bs-danger: #{$light-danger};
 
   &[data-bs-theme="dark"] {
     --bs-primary: #{$dark-primary};
-    --bs-secondary: #{$dark-secondary};
     --bs-body-bg: #{$dark-body-bg};
     --bs-dark: #{$dark-dark};
     --bs-light: #{$dark-light};
     --bs-border-color: #{$dark-border-color};
     --bs-body-color: #{$dark-body-color};
-    --bs-success: #{$dark-success};
-    --bs-danger: #{$dark-danger};
     --bs-info: #{$dark-info};
+    --bs-success: #{$dark-success};
     --bs-warning: #{$dark-warning};
+    --bs-danger: #{$dark-danger};
   }
 }
