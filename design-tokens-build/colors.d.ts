@@ -6,6 +6,11 @@ import type {} from '@digdir/designsystemet/types';
 declare module '@digdir/designsystemet/types' {
   export interface ColorDefinitions {
     'primary-color-red': never;
+    'secondary-color-orange': never;
+    'secondary-color-rust': never;
+    'secondary-color-pink': never;
+    'additional-color-ocean': never;
+    'additional-color-jungle': never;
     neutral: never;
   }
   export interface SeverityColorDefinitions {
