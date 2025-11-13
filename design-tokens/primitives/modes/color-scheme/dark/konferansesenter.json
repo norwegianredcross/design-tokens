@@ -435,23 +435,23 @@
       },
       "10": {
         "$type": "color",
-        "$value": "#a8a8a8"
+        "$value": "#BEBEBE"
       },
       "11": {
         "$type": "color",
-        "$value": "#969696"
+        "$value": "#EDEDED"
       },
       "12": {
         "$type": "color",
-        "$value": "#818181"
+        "$value": "#ABABAB"
       },
       "13": {
         "$type": "color",
-        "$value": "#BEBEBE"
+        "$value": "#969696"
       },
       "14": {
         "$type": "color",
-        "$value": "#EDEDED"
+        "$value": "#818181"
       },
       "15": {
         "$type": "color",

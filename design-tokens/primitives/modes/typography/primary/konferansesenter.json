@@ -2,7 +2,7 @@
   "konferansesenter": {
     "font-family": {
       "$type": "fontFamilies",
-      "$value": "Inter"
+      "$value": "Source Sans Pro"
     },
     "font-weight": {
       "medium": {
