@@ -39,31 +39,31 @@
       },
       "10": {
         "$type": "color",
-        "$value": "#d52b1e"
+        "$value": "#F2BDB9"
       },
       "11": {
         "$type": "color",
-        "$value": "#B12419"
+        "$value": "#FAE4E2"
       },
       "12": {
         "$type": "color",
-        "$value": "#8E1D14"
+        "$value": "#d52b1e"
       },
       "13": {
         "$type": "color",
-        "$value": "#F2BDB9"
+        "$value": "#B12419"
       },
       "14": {
         "$type": "color",
-        "$value": "#FAE4E2"
+        "$value": "#8E1D14"
       },
       "15": {
         "$type": "color",
-        "$value": "#000000"
+        "$value": "#FDF4F4"
       },
       "16": {
         "$type": "color",
-        "$value": "#1B1B1B"
+        "$value": "#FFFFFF"
       }
     },
     "secondary-color-orange": {
