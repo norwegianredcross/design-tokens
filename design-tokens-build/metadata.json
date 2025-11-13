@@ -1,5 +1,5 @@
 {
-  "version": "1.0.41",
+  "version": "1.0.42",
   "tokens": {
     "semantic": {
       "size": {
@@ -1358,7 +1358,7 @@
         },
         "font": {
           "family": {
-            "value": "Inter"
+            "value": "Source Sans Pro"
           },
           "weight": {
             "medium": {

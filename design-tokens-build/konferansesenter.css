@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-build: v1.7.1
+build: v1.7.2
 design-tokens: v1.7.1
 */
 
@@ -196,11 +196,11 @@ design-tokens: v1.7.1
   --ds-color-neutral-border-subtle: #505050;
   --ds-color-neutral-border-default: #818181;
   --ds-color-neutral-border-strong: #BEBEBE;
-  --ds-color-neutral-text-subtle: #ABABAB;
-  --ds-color-neutral-text-default: #969696;
-  --ds-color-neutral-base-default: #818181;
-  --ds-color-neutral-base-hover: #BEBEBE;
-  --ds-color-neutral-base-active: #EDEDED;
+  --ds-color-neutral-text-subtle: #BEBEBE;
+  --ds-color-neutral-text-default: #EDEDED;
+  --ds-color-neutral-base-default: #ABABAB;
+  --ds-color-neutral-base-hover: #969696;
+  --ds-color-neutral-base-active: #818181;
   --ds-color-neutral-base-contrast-subtle: #000000;
   --ds-color-neutral-base-contrast-default: #1B1B1B;
   --ds-color-info-background-default: #ffffff;
@@ -268,7 +268,7 @@ design-tokens: v1.7.1
   --ds-color-danger-base-contrast-subtle: #f7e1e1;
   --ds-color-danger-base-contrast-default: #ffffff;
   --ds-color-focus-inner: #232323;
-  --ds-color-focus-outer: #969696;
+  --ds-color-focus-outer: #EDEDED;
   --ds-link-color-visited: #663299;
 
   color-scheme: light;
@@ -381,11 +381,11 @@ design-tokens: v1.7.1
   --ds-color-neutral-border-subtle: #505050;
   --ds-color-neutral-border-default: #818181;
   --ds-color-neutral-border-strong: #BEBEBE;
-  --ds-color-neutral-text-subtle: #ABABAB;
-  --ds-color-neutral-text-default: #969696;
-  --ds-color-neutral-base-default: #818181;
-  --ds-color-neutral-base-hover: #BEBEBE;
-  --ds-color-neutral-base-active: #EDEDED;
+  --ds-color-neutral-text-subtle: #BEBEBE;
+  --ds-color-neutral-text-default: #EDEDED;
+  --ds-color-neutral-base-default: #ABABAB;
+  --ds-color-neutral-base-hover: #969696;
+  --ds-color-neutral-base-active: #818181;
   --ds-color-neutral-base-contrast-subtle: #000000;
   --ds-color-neutral-base-contrast-default: #1B1B1B;
   --ds-color-info-background-default: #ffffff;
@@ -453,7 +453,7 @@ design-tokens: v1.7.1
   --ds-color-danger-base-contrast-subtle: #f7e1e1;
   --ds-color-danger-base-contrast-default: #ffffff;
   --ds-color-focus-inner: #232323;
-  --ds-color-focus-outer: #969696;
+  --ds-color-focus-outer: #EDEDED;
   --ds-link-color-visited: #663299;
 
   color-scheme: light;
@@ -731,11 +731,11 @@ design-tokens: v1.7.1
   --ds-color-neutral-border-subtle: #505050;
   --ds-color-neutral-border-default: #818181;
   --ds-color-neutral-border-strong: #BEBEBE;
-  --ds-color-neutral-text-subtle: #a8a8a8;
-  --ds-color-neutral-text-default: #969696;
-  --ds-color-neutral-base-default: #818181;
-  --ds-color-neutral-base-hover: #BEBEBE;
-  --ds-color-neutral-base-active: #EDEDED;
+  --ds-color-neutral-text-subtle: #BEBEBE;
+  --ds-color-neutral-text-default: #EDEDED;
+  --ds-color-neutral-base-default: #ABABAB;
+  --ds-color-neutral-base-hover: #969696;
+  --ds-color-neutral-base-active: #818181;
   --ds-color-neutral-base-contrast-subtle: #000000;
   --ds-color-neutral-base-contrast-default: #1B1B1B;
   --ds-color-info-background-default: #0d1925;
@@ -803,7 +803,7 @@ design-tokens: v1.7.1
   --ds-color-danger-base-contrast-subtle: #271414;
   --ds-color-danger-base-contrast-default: #000000;
   --ds-color-focus-inner: #232323;
-  --ds-color-focus-outer: #969696;
+  --ds-color-focus-outer: #EDEDED;
   --ds-link-color-visited: #b49acd;
 
   color-scheme: dark;
@@ -916,11 +916,11 @@ design-tokens: v1.7.1
   --ds-color-neutral-border-subtle: #505050;
   --ds-color-neutral-border-default: #818181;
   --ds-color-neutral-border-strong: #BEBEBE;
-  --ds-color-neutral-text-subtle: #a8a8a8;
-  --ds-color-neutral-text-default: #969696;
-  --ds-color-neutral-base-default: #818181;
-  --ds-color-neutral-base-hover: #BEBEBE;
-  --ds-color-neutral-base-active: #EDEDED;
+  --ds-color-neutral-text-subtle: #BEBEBE;
+  --ds-color-neutral-text-default: #EDEDED;
+  --ds-color-neutral-base-default: #ABABAB;
+  --ds-color-neutral-base-hover: #969696;
+  --ds-color-neutral-base-active: #818181;
   --ds-color-neutral-base-contrast-subtle: #000000;
   --ds-color-neutral-base-contrast-default: #1B1B1B;
   --ds-color-info-background-default: #0d1925;
@@ -988,7 +988,7 @@ design-tokens: v1.7.1
   --ds-color-danger-base-contrast-subtle: #271414;
   --ds-color-danger-base-contrast-default: #000000;
   --ds-color-focus-inner: #232323;
-  --ds-color-focus-outer: #969696;
+  --ds-color-focus-outer: #EDEDED;
   --ds-link-color-visited: #b49acd;
 
   color-scheme: dark;
@@ -1012,7 +1012,7 @@ design-tokens: v1.7.1
   --ds-letter-spacing-7: 0.0025em;
   --ds-letter-spacing-8: 0.005em;
   --ds-letter-spacing-9: 0.015em;
-  --ds-font-family: Inter;
+  --ds-font-family: Source Sans Pro;
   --ds-font-weight-medium: 500;
   --ds-font-weight-semibold: 600;
   --ds-font-weight-regular: 400;
