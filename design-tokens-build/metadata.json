@@ -1,5 +1,5 @@
 {
-  "version": "1.0.43",
+  "version": "1.0.44",
   "tokens": {
     "semantic": {
       "size": {
@@ -913,14 +913,14 @@
         },
         "font": {
           "family": {
-            "value": "Inter"
+            "value": "Source Sans Pro"
           },
           "weight": {
             "medium": {
               "value": "500"
             },
             "semibold": {
-              "value": "600"
+              "value": "700"
             },
             "regular": {
               "value": "400"
@@ -1365,7 +1365,7 @@
               "value": "500"
             },
             "semibold": {
-              "value": "600"
+              "value": "700"
             },
             "regular": {
               "value": "400"
