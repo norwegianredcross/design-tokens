@@ -560,12 +560,12 @@
     "group": "Typography",
     "$figmaVariableReferences": {
       "theme.font-family": "b9e44aca284a77223f5093ea7e4bdf5fdcd6aaf0",
+      "theme.font-weight.bold": "4f4ca2edd3eb05c77369ea94bad36914023e00fb",
       "theme.font-weight.medium": "f1d056b07bb599583ffacee58595dd943a11a204",
-      "theme.font-weight.semibold": "8dabb3bcc233793076dbc02f01be2977f80ff2cf",
       "theme.font-weight.regular": "bf1d3e1163bff36d46288a39c62e6853af4c4d05",
       "konferansesenter.font-family": "db95a503c6c234e14db94a8689a712e7604d60dd",
+      "konferansesenter.font-weight.bold": "4824897eb67f89d3c9420a2e7ed1c0b01e8c7c30",
       "konferansesenter.font-weight.medium": "b9c7c92db109fe05d8b03ee5ea452693effc1cd9",
-      "konferansesenter.font-weight.semibold": "58fcdb5a1a7066d0840a4a7f438a0599c44ac1aa",
       "konferansesenter.font-weight.regular": "eeb909310110b6abd29d433d713281edf7b21179"
     }
   },
@@ -581,12 +581,12 @@
     "group": "Typography",
     "$figmaVariableReferences": {
       "theme.font-family": "b9e44aca284a77223f5093ea7e4bdf5fdcd6aaf0",
+      "theme.font-weight.bold": "4f4ca2edd3eb05c77369ea94bad36914023e00fb",
       "theme.font-weight.medium": "f1d056b07bb599583ffacee58595dd943a11a204",
-      "theme.font-weight.semibold": "8dabb3bcc233793076dbc02f01be2977f80ff2cf",
       "theme.font-weight.regular": "bf1d3e1163bff36d46288a39c62e6853af4c4d05",
       "konferansesenter.font-family": "db95a503c6c234e14db94a8689a712e7604d60dd",
+      "konferansesenter.font-weight.bold": "4824897eb67f89d3c9420a2e7ed1c0b01e8c7c30",
       "konferansesenter.font-weight.medium": "b9c7c92db109fe05d8b03ee5ea452693effc1cd9",
-      "konferansesenter.font-weight.semibold": "58fcdb5a1a7066d0840a4a7f438a0599c44ac1aa",
       "konferansesenter.font-weight.regular": "eeb909310110b6abd29d433d713281edf7b21179"
     }
   },

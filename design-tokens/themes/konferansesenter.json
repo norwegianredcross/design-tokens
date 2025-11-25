@@ -744,7 +744,7 @@
     },
     "semibold": {
       "$type": "fontWeights",
-      "$value": "{konferansesenter.font-weight.semibold}"
+      "$value": "{konferansesenter.font-weight.bold}"
     },
     "regular": {
       "$type": "fontWeights",

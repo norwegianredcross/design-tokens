@@ -744,7 +744,7 @@
     },
     "semibold": {
       "$type": "fontWeights",
-      "$value": "{theme.font-weight.semibold}"
+      "$value": "{theme.font-weight.bold}"
     },
     "regular": {
       "$type": "fontWeights",
