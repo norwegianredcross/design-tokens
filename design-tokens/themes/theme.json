@@ -731,6 +731,16 @@
         "$type": "color",
         "$value": "{theme.link.visited}"
       }
+    },
+    "focus": {
+      "inner-color": {
+        "$type": "color",
+        "$value": "{theme.focus.inner}"
+      },
+      "outer-color": {
+        "$type": "color",
+        "$value": "{theme.focus.outer}"
+      }
     }
   },
   "font-family": {
@@ -744,7 +754,7 @@
     },
     "semibold": {
       "$type": "fontWeights",
-      "$value": "{theme.font-weight.bold}"
+      "$value": "{theme.font-weight.semibold}"
     },
     "regular": {
       "$type": "fontWeights",

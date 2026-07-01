@@ -23,10 +23,10 @@
     "access": "public"
   },
   "devDependencies": {
-    "@digdir/designsystemet": "latest",
-    "style-dictionary": "^3.9.2",
-    "postcss": "^8.4.38",
+    "@digdir/designsystemet": "^1.18.0",
+    "culori": "^4.0.2",
     "lodash.set": "^4.3.2",
-    "culori": "^4.0.2"
+    "postcss": "^8.4.38",
+    "style-dictionary": "^3.9.2"
   }
 }
