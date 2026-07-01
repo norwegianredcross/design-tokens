@@ -1,5 +1,5 @@
 {
-  "version": "1.0.45",
+  "version": "1.0.46",
   "tokens": {
     "semantic": {
       "size": {
@@ -913,14 +913,14 @@
         },
         "font": {
           "family": {
-            "value": "Source Sans Pro"
+            "value": "Inter"
           },
           "weight": {
             "medium": {
               "value": "500"
             },
             "semibold": {
-              "value": "700"
+              "value": "600"
             },
             "regular": {
               "value": "400"
@@ -1358,14 +1358,14 @@
         },
         "font": {
           "family": {
-            "value": "Source Sans Pro"
+            "value": "Inter"
           },
           "weight": {
             "medium": {
               "value": "500"
             },
             "semibold": {
-              "value": "700"
+              "value": "600"
             },
             "regular": {
               "value": "400"
@@ -1804,7 +1804,7 @@
               },
               "base": {
                 "default": {
-                  "value": "#D52B1E"
+                  "value": "#dc4f44"
                 },
                 "hover": {
                   "value": "#e37168"

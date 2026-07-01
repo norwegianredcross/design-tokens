@@ -47,7 +47,7 @@
       },
       "12": {
         "$type": "color",
-        "$value": "#D52B1E"
+        "$value": "#dc4f44"
       },
       "13": {
         "$type": "color",
@@ -730,6 +730,16 @@
       "visited": {
         "$type": "color",
         "$value": "#b49acd"
+      }
+    },
+    "focus": {
+      "inner": {
+        "$type": "color",
+        "$value": "#181818"
+      },
+      "outer": {
+        "$type": "color",
+        "$value": "#ececec"
       }
     }
   }

@@ -731,6 +731,16 @@
         "$type": "color",
         "$value": "{konferansesenter.link.visited}"
       }
+    },
+    "focus": {
+      "inner-color": {
+        "$type": "color",
+        "$value": "{konferansesenter.focus.inner}"
+      },
+      "outer-color": {
+        "$type": "color",
+        "$value": "{konferansesenter.focus.outer}"
+      }
     }
   },
   "font-family": {
@@ -744,7 +754,7 @@
     },
     "semibold": {
       "$type": "fontWeights",
-      "$value": "{konferansesenter.font-weight.bold}"
+      "$value": "{konferansesenter.font-weight.semibold}"
     },
     "regular": {
       "$type": "fontWeights",

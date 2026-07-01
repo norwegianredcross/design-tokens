@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
-build: v1.9.0
-design-tokens: v1.7.1
+build: v1.18.0
+design-tokens: v1.18.0
 */
 
 @layer ds.theme.size-mode {
@@ -477,9 +477,9 @@ design-tokens: v1.7.1
   --ds-letter-spacing-7: 0.0025em;
   --ds-letter-spacing-8: 0.005em;
   --ds-letter-spacing-9: 0.015em;
-  --ds-font-family: Source Sans Pro;
+  --ds-font-family: Inter;
   --ds-font-weight-medium: 500;
-  --ds-font-weight-semibold: 700;
+  --ds-font-weight-semibold: 600;
   --ds-font-weight-regular: 400;
   --ds-heading-2xl-font-weight: 500;
   --ds-heading-2xl-line-height: 1.3;
@@ -637,7 +637,7 @@ design-tokens: v1.7.1
   --ds-color-primary-color-red-border-strong: #d89890;
   --ds-color-primary-color-red-text-subtle: #d89890;
   --ds-color-primary-color-red-text-default: #f7e9e8;
-  --ds-color-primary-color-red-base-default: #D52B1E;
+  --ds-color-primary-color-red-base-default: #dc4f44;
   --ds-color-primary-color-red-base-hover: #e37168;
   --ds-color-primary-color-red-base-active: #e9928b;
   --ds-color-primary-color-red-base-contrast-subtle: #170807;
@@ -822,7 +822,7 @@ design-tokens: v1.7.1
   --ds-color-primary-color-red-border-strong: #d89890;
   --ds-color-primary-color-red-text-subtle: #d89890;
   --ds-color-primary-color-red-text-default: #f7e9e8;
-  --ds-color-primary-color-red-base-default: #D52B1E;
+  --ds-color-primary-color-red-base-default: #dc4f44;
   --ds-color-primary-color-red-base-hover: #e37168;
   --ds-color-primary-color-red-base-active: #e9928b;
   --ds-color-primary-color-red-base-contrast-subtle: #170807;
@@ -1012,9 +1012,9 @@ design-tokens: v1.7.1
   --ds-letter-spacing-7: 0.0025em;
   --ds-letter-spacing-8: 0.005em;
   --ds-letter-spacing-9: 0.015em;
-  --ds-font-family: Source Sans Pro;
+  --ds-font-family: Inter;
   --ds-font-weight-medium: 500;
-  --ds-font-weight-semibold: 700;
+  --ds-font-weight-semibold: 600;
   --ds-font-weight-regular: 400;
   --ds-heading-2xl-font-weight: 500;
   --ds-heading-2xl-line-height: 1.3;
