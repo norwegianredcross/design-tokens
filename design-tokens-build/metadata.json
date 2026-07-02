@@ -95,7 +95,7 @@
       "border": {
         "radius": {
           "base": {
-            "value": "624.9375rem"
+            "value": "0.25rem"
           },
           "scale": {
             "value": "0.25rem"
@@ -417,7 +417,7 @@
                   "value": "#ffffff"
                 },
                 "tinted": {
-                  "value": "#eaf7ff"
+                  "value": "#f2f4f5"
                 }
               },
               "surface": {
@@ -487,10 +487,10 @@
                   "value": "#ffffff"
                 },
                 "tinted": {
-                  "value": "#e6f6e4"
+                  "value": "#e8e9e1"
                 },
                 "hover": {
-                  "value": "#cde4ca"
+                  "value": "#d9dbce"
                 },
                 "active": {
                   "value": "#c9ccb8"
@@ -543,7 +543,7 @@
               "value": "#ffffff"
             },
             "tinted": {
-              "value": "#f7f3ef"
+              "value": "#f3f3f3"
             }
           },
           "surface": {
