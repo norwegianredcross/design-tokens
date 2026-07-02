@@ -156,7 +156,7 @@ design-tokens: v1.18.0
   --ds-color-secondary-color-pink-base-contrast-subtle: #070303;
   --ds-color-secondary-color-pink-base-contrast-default: #000000;
   --ds-color-additional-color-ocean-background-default: #ffffff;
-  --ds-color-additional-color-ocean-background-tinted: #f2f4f5;
+  --ds-color-additional-color-ocean-background-tinted: #eaf7ff;
   --ds-color-additional-color-ocean-surface-default: #ffffff;
   --ds-color-additional-color-ocean-surface-tinted: #e5e9ec;
   --ds-color-additional-color-ocean-surface-hover: #d4dbe0;
@@ -174,8 +174,8 @@ design-tokens: v1.18.0
   --ds-color-additional-color-jungle-background-default: #ffffff;
   --ds-color-additional-color-jungle-background-tinted: #f3f4f0;
   --ds-color-additional-color-jungle-surface-default: #ffffff;
-  --ds-color-additional-color-jungle-surface-tinted: #e8e9e1;
-  --ds-color-additional-color-jungle-surface-hover: #d9dbce;
+  --ds-color-additional-color-jungle-surface-tinted: #e6f6e4;
+  --ds-color-additional-color-jungle-surface-hover: #cde4ca;
   --ds-color-additional-color-jungle-surface-active: #c9ccb8;
   --ds-color-additional-color-jungle-border-subtle: #bbbea5;
   --ds-color-additional-color-jungle-border-default: #767d4b;
@@ -188,7 +188,7 @@ design-tokens: v1.18.0
   --ds-color-additional-color-jungle-base-contrast-subtle: #f5f5f2;
   --ds-color-additional-color-jungle-base-contrast-default: #ffffff;
   --ds-color-neutral-background-default: #ffffff;
-  --ds-color-neutral-background-tinted: #f3f3f3;
+  --ds-color-neutral-background-tinted: #f7f3ef;
   --ds-color-neutral-surface-default: #ffffff;
   --ds-color-neutral-surface-tinted: #e8e8e8;
   --ds-color-neutral-surface-hover: #dadada;
@@ -341,7 +341,7 @@ design-tokens: v1.18.0
   --ds-color-secondary-color-pink-base-contrast-subtle: #070303;
   --ds-color-secondary-color-pink-base-contrast-default: #000000;
   --ds-color-additional-color-ocean-background-default: #ffffff;
-  --ds-color-additional-color-ocean-background-tinted: #f2f4f5;
+  --ds-color-additional-color-ocean-background-tinted: #eaf7ff;
   --ds-color-additional-color-ocean-surface-default: #ffffff;
   --ds-color-additional-color-ocean-surface-tinted: #e5e9ec;
   --ds-color-additional-color-ocean-surface-hover: #d4dbe0;
@@ -359,8 +359,8 @@ design-tokens: v1.18.0
   --ds-color-additional-color-jungle-background-default: #ffffff;
   --ds-color-additional-color-jungle-background-tinted: #f3f4f0;
   --ds-color-additional-color-jungle-surface-default: #ffffff;
-  --ds-color-additional-color-jungle-surface-tinted: #e8e9e1;
-  --ds-color-additional-color-jungle-surface-hover: #d9dbce;
+  --ds-color-additional-color-jungle-surface-tinted: #e6f6e4;
+  --ds-color-additional-color-jungle-surface-hover: #cde4ca;
   --ds-color-additional-color-jungle-surface-active: #c9ccb8;
   --ds-color-additional-color-jungle-border-subtle: #bbbea5;
   --ds-color-additional-color-jungle-border-default: #767d4b;
@@ -373,7 +373,7 @@ design-tokens: v1.18.0
   --ds-color-additional-color-jungle-base-contrast-subtle: #f5f5f2;
   --ds-color-additional-color-jungle-base-contrast-default: #ffffff;
   --ds-color-neutral-background-default: #ffffff;
-  --ds-color-neutral-background-tinted: #f3f3f3;
+  --ds-color-neutral-background-tinted: #f7f3ef;
   --ds-color-neutral-surface-default: #ffffff;
   --ds-color-neutral-surface-tinted: #e8e8e8;
   --ds-color-neutral-surface-hover: #dadada;
@@ -604,7 +604,7 @@ design-tokens: v1.18.0
 
 @layer ds.theme.semantic {
 :root {
-  --ds-border-radius-base: 0.25rem;
+  --ds-border-radius-base: 624.9375rem;
   --ds-border-radius-scale: 0.25rem;
   --ds-border-radius-sm: min(var(--ds-border-radius-base)*0.5,var(--ds-border-radius-scale));
   --ds-border-radius-md: min(var(--ds-border-radius-base),var(--ds-border-radius-scale)*2);
