@@ -5,13 +5,21 @@ import type {} from '@digdir/designsystemet-types';
 // Augment types based on theme
 declare module '@digdir/designsystemet-types' {
   export interface ColorDefinitions {
-    'primary-color-red': never;
+    'hoved-beige': never;
+    neutral: never;
+    'hoved-rosa': never;
+    'hoved-mint': never;
+    'hoved-lysebla': never;
+    'hoved-neutral': never;
+    'red-cta': never;
     'secondary-color-orange': never;
-    'secondary-color-rust': never;
+    'rust-main': never;
     'secondary-color-pink': never;
     'additional-color-ocean': never;
     'additional-color-jungle': never;
-    neutral: never;
+    'secondary-color-warm-beige': never;
+    'primary-color-red': never;
+    'secondary-color-rust': never;
   }
   export interface SeverityColorDefinitions {
     info: never;

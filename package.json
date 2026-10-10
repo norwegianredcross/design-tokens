@@ -1,6 +1,6 @@
 {
   "name": "rk-design-tokens",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "Design tokens for the Røde Kors design system.",
   "style": "design-tokens-build/theme.css",
   "files": [
@@ -8,22 +8,20 @@
     "dist/"
   ],
   "scripts": {
-    "create:tokens:theme": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.theme.json",
-    "create:tokens:konferansesenter": "npx @digdir/designsystemet@latest tokens create --config designsystemet.config.konferansesenter.json",
-    "create:tokens": "npm run create:tokens:theme && npm run create:tokens:konferansesenter",
-    "build:tokens:theme": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.theme.json",
-    "build:tokens:konferansesenter": "npx @digdir/designsystemet@latest tokens build --config designsystemet.config.konferansesenter.json",
-    "build:tokens": "npm run build:tokens:theme && npm run build:tokens:konferansesenter",
+    "create:tokens": "designsystemet tokens create --config designsystemet.config.json",
+    "build:tokens": "designsystemet tokens build --config designsystemet.config.json --out-dir design-tokens-build/digdir && cp styles/theme.css styles/konferansesenter.css styles/figma.css design-tokens-build/ && cp design-tokens-build/digdir/*.d.ts design-tokens-build/",
     "build:bootstrap": "node build-bootstrap.js",
     "build:shadcn": "node build-shadcn.js",
     "build:metadata": "node build-metadata.js",
-    "build": "npm run build:tokens && npm run build:bootstrap && npm run build:shadcn && npm run build:metadata"
+    "build:dist": "cp designsystemet.config.json design-tokens-build/designsystemet.config.json && cp design-tokens-build/theme.css dist/brand-1.css && cp -R design-tokens-build/digdir dist/ && cp design-tokens-build/figma.css design-tokens-build/shadcn-theme.css design-tokens-build/types.d.ts design-tokens-build/colors.d.ts dist/",
+    "build": "npm run build:tokens && npm run build:bootstrap && npm run build:shadcn && npm run build:metadata && npm run build:dist",
+    "test": "node --test test/*.test.js"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "@digdir/designsystemet": "^1.18.0",
+    "@digdir/designsystemet": "1.18.0",
     "culori": "^4.0.2",
     "lodash.set": "^4.3.2",
     "postcss": "^8.4.38",

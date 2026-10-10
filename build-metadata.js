@@ -9,7 +9,7 @@ const set = require('lodash.set');
  * @returns {object} The structured metadata object.
  */
 async function buildMetadata() {
-  const sourceCssPath = path.join('design-tokens-build', 'theme.css');
+  const sourceCssPath = path.join('design-tokens-build', 'digdir', 'theme.css');
   const outputJsonPath = path.join('design-tokens-build', 'metadata.json');
   const packageJsonPath = path.join(__dirname, 'package.json');
 
@@ -40,6 +40,8 @@ async function buildMetadata() {
         categoryPath = ['tokens', 'typography', 'primary'];
     } else if (rule.selector.includes('[data-typography="secondary"]')) {
         categoryPath = ['tokens', 'typography', 'secondary'];
+    } else if (rule.selector.includes('[data-typography="header"]')) {
+        categoryPath = ['tokens', 'typography', 'header'];
     } else if (rule.selector.includes(':root')) {
        // This could be semantic or a base light theme. We check for known semantic variables.
        let isSemantic = false;

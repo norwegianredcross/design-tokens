@@ -4,6 +4,10 @@
 
 name: Publish Design Tokens and Deploy to Pages
 
+concurrency:
+  group: publish-design-tokens
+  cancel-in-progress: false
+
 on:
   push:
     branches:
@@ -30,7 +34,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24.16.0"
           registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
@@ -38,6 +42,9 @@ jobs:
 
       - name: Build All Token Artifacts
         run: npm run build
+
+      - name: Verify Generated Tokens
+        run: npm test
 
       - name: Configure Git
         run: |
@@ -47,30 +54,30 @@ jobs:
       - name: Commit, Version, and Publish to NPM if Changed
         id: publish_step
         run: |
+          set -euo pipefail
+          version_status=$(node scripts/npm-version-status.js)
           # Stage the generated build artifacts. Use --force as they might be in .gitignore
-          git add --force design-tokens-build/ dist/
+          git add --force design-tokens/ design-tokens-build/ dist/
           
-          # Check if there are any staged changes. If not, the build produced no new output.
-          if git diff --staged --quiet; then
-            echo "No changes in build artifacts. Skipping NPM publish."
-            echo "changes_detected=false" >> $GITHUB_OUTPUT
-          else
-            echo "Changes detected. Committing and publishing to NPM."
-            # Commit the new assets
+          # Reproducible, checked-in output is expected. An explicitly bumped
+          # unpublished version still needs publishing when this diff is empty.
+          if ! git diff --staged --quiet; then
             git commit -m "build: generate new token assets"
-            
-            # Bump the patch version, create a version commit, and tag it
-            npm version patch -m "chore(release): publish new tokens v%s"
-            
-            # Push the commit and the new tag to the repository
-            git push --follow-tags
-            
-            # Publish the new version to NPM
-            npm publish
-            
-            # Set an output variable to notify other steps/jobs that a new version was published
-            echo "changes_detected=true" >> $GITHUB_OUTPUT
+            if [ "$version_status" = published ]; then
+              npm version patch -m "chore(release): publish new tokens v%s"
+            fi
+          elif [ "$version_status" = published ]; then
+            echo "No generated changes and this version is already published."
+            echo "changes_detected=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          version=$(node -p 'require("./package.json").version')
+          if ! git rev-parse --verify "refs/tags/v$version" >/dev/null 2>&1; then
+            git tag -a "v$version" -m "Release v$version"
+          fi
+          git push --follow-tags
+          npm publish
+          echo "changes_detected=true" >> "$GITHUB_OUTPUT"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

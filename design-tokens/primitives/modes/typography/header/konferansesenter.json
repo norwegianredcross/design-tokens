@@ -1,0 +1,44 @@
+{
+  "konferansesenter": {
+    "font-family": {
+      "$type": "fontFamilies",
+      "$value": "Source Sans 3"
+    },
+    "font-weight": {
+      "medium": {
+        "$type": "fontWeights",
+        "$value": "Medium"
+      },
+      "regular": {
+        "$type": "fontWeights",
+        "$value": "Regular"
+      },
+      "semibold": {
+        "$type": "fontWeights",
+        "$value": "SemiBold"
+      },
+      "bold": {
+        "$type": "fontWeights",
+        "$value": "Bold"
+      }
+    },
+    "italic": {
+      "regular": {
+        "$type": "string",
+        "$value": "Italic"
+      },
+      "medium": {
+        "$type": "string",
+        "$value": "Medium Italic"
+      },
+      "semibold": {
+        "$type": "string",
+        "$value": "SemiBold Italic"
+      },
+      "bold": {
+        "$type": "string",
+        "$value": "Bold Italic"
+      }
+    }
+  }
+}
