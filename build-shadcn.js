@@ -21,14 +21,14 @@ const TOKEN_MAP = {
   'card-foreground': '--ds-color-neutral-text-default',
   popover: '--ds-color-neutral-surface-default',
   'popover-foreground': '--ds-color-neutral-text-default',
-  primary: '--ds-color-primary-base-default',
-  'primary-foreground': '--ds-color-primary-base-contrast-default',
+  primary: '--ds-color-hoved-beige-base-default',
+  'primary-foreground': '--ds-color-hoved-beige-base-contrast-default',
   secondary: '--ds-color-neutral-base-default',
   'secondary-foreground': '--ds-color-neutral-base-contrast-default',
   muted: '--ds-color-neutral-surface-tinted',
   'muted-foreground': '--ds-color-neutral-text-subtle',
-  accent: '--ds-color-primary-surface-active',
-  'accent-foreground': '--ds-color-primary-text-default',
+  accent: '--ds-color-hoved-beige-surface-active',
+  'accent-foreground': '--ds-color-hoved-beige-text-default',
   destructive: '--ds-color-danger-base-default',
   'destructive-foreground': '--ds-color-danger-base-contrast-default',
   border: '--ds-color-neutral-border-default',
@@ -58,7 +58,7 @@ function parseCssVariables(cssBlock) {
 function transformTokens() {
   console.log('🚀 Starting token transformation...');
 
-  const inputPath = path.join(__dirname, 'design-tokens-build', 'theme.css');
+  const inputPath = path.join(__dirname, 'design-tokens-build', 'digdir', 'theme.css');
   const outputPath = path.join(__dirname, 'design-tokens-build', 'shadcn-theme.css');
 
   if (!fs.existsSync(inputPath)) {
@@ -131,4 +131,3 @@ function transformTokens() {
 
 // Run the script
 transformTokens();
-

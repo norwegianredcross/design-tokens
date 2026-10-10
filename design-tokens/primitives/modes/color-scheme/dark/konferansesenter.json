@@ -729,7 +729,7 @@
     "link": {
       "visited": {
         "$type": "color",
-        "$value": "#b49acd"
+        "$value": "#e3c2c3"
       }
     },
     "focus": {
@@ -740,6 +740,12 @@
       "outer": {
         "$type": "color",
         "$value": "#ececec"
+      }
+    },
+    "secondary-color-warm-beige": {
+      "12": {
+        "$type": "color",
+        "$value": "#c9a462"
       }
     }
   }

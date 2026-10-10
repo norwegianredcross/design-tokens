@@ -9,8 +9,8 @@ const postcss = require('postcss');
 // Add to this map as you need to theme more Bootstrap components.
 // ==========================================================================
 const tokenMap = {
-  // CORRECTED: Maps to your new primary color token
-  'ds-color-primary-color-red-base-default': { sassVar: 'primary', cssVar: 'primary' },
+  // Main default color context (Hoved · beige)
+  'ds-color-hoved-beige-base-default': { sassVar: 'primary', cssVar: 'primary' },
 
   // CORRECTED: Maps to your new secondary color token
   'ds-color-additional-color-ocean-base-default': { sassVar: 'secondary', cssVar: 'secondary' },
@@ -33,7 +33,7 @@ const tokenMap = {
 
 // --- Main Build Function ---
 async function build() {
-  const sourceCssPath = path.join('design-tokens-build', 'theme.css');
+  const sourceCssPath = path.join('design-tokens-build', 'digdir', 'theme.css');
   const outputScssPath = path.join('design-tokens-build', 'bootstrap-theme.scss');
 
   if (!fs.existsSync(sourceCssPath)) {

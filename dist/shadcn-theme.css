@@ -30,49 +30,49 @@
 }
 
 :root {
-  --background: oklch(100.00% 0.0000 0); /* #fff */
-  --foreground: oklch(28.94% 0.0361 255.39); /* #1f2c3d */
+  --background: oklch(100.00% 0.0000 0); /* #ffffff */
+  --foreground: oklch(28.91% 0.0000 0); /* #2b2b2b */
   --card: oklch(100.00% 0.0000 0); /* #ffffff */
-  --card-foreground: oklch(28.94% 0.0361 255.39); /* #1f2c3d */
+  --card-foreground: oklch(28.91% 0.0000 0); /* #2b2b2b */
   --popover: oklch(100.00% 0.0000 0); /* #ffffff */
-  --popover-foreground: oklch(28.94% 0.0361 255.39); /* #1f2c3d */
-  --primary: oklch(56.71% 0.2067 29.54); /* #D52B1E */
-  --primary-foreground: oklch(100.00% 0.0000 0); /* #fff */
-  --secondary: oklch(28.54% 0.0362 255.40); /* #1E2B3C */
-  --secondary-foreground: oklch(100.00% 0.0000 0); /* #fff */
-  --muted: oklch(93.28% 0.0025 228.79); /* #e7e9ea */
-  --muted-foreground: oklch(47.81% 0.0244 255.03); /* #545e6b */
-  --accent: oklch(84.47% 0.0616 23.44); /* #f2bdb9 */
-  --accent-foreground: oklch(30.27% 0.1024 28.81); /* #57110c */
-  --destructive: oklch(51.80% 0.1974 27.72); /* #C01B1B */
+  --popover-foreground: oklch(28.91% 0.0000 0); /* #2b2b2b */
+  --primary: oklch(43.50% 0.1612 26.33); /* #96171a */
+  --primary-foreground: oklch(100.00% 0.0000 0); /* #ffffff */
+  --secondary: oklch(23.50% 0.0000 0); /* #1e1e1e */
+  --secondary-foreground: oklch(100.00% 0.0000 0); /* #ffffff */
+  --muted: oklch(93.10% 0.0000 0); /* #e8e8e8 */
+  --muted-foreground: oklch(47.84% 0.0000 0); /* #5d5d5d */
+  --accent: oklch(84.25% 0.0376 15.85); /* #e3c2c3 */
+  --accent-foreground: oklch(30.42% 0.1069 25.79); /* #590e0f */
+  --destructive: oklch(59.60% 0.2446 29.23); /* #ee0000 */
   --destructive-foreground: oklch(100.00% 0.0000 0); /* #ffffff */
-  --border: oklch(57.54% 0.0188 250.96); /* #717a84 */
-  --input: oklch(79.36% 0.0083 253.87); /* #b8bcc1 */
-  --ring: oklch(28.94% 0.0361 255.39); /* #1f2c3d */
-  --radius: 0.25rem;
+  --border: oklch(28.91% 0.0000 0); /* #2b2b2b */
+  --input: oklch(79.52% 0.0000 0); /* #bcbcbc */
+  --ring: oklch(43.50% 0.1612 26.33); /* #96171a */
+  --radius: 624.9375rem;
 }
 
 .dark {
-  --background: oklch(20.72% 0.0159 256.82); /* #13181f */
-  --foreground: oklch(94.26% 0.0017 247.84); /* #ebeced */
-  --card: oklch(27.46% 0.0251 258.35); /* #202834 */
-  --card-foreground: oklch(94.26% 0.0017 247.84); /* #ebeced */
-  --popover: oklch(27.46% 0.0251 258.35); /* #202834 */
-  --popover-foreground: oklch(94.26% 0.0017 247.84); /* #ebeced */
-  --primary: oklch(61.74% 0.1784 27.89); /* #dc4f44 */
+  --background: oklch(20.90% 0.0000 0); /* #181818 */
+  --foreground: oklch(94.31% 0.0000 0); /* #ececec */
+  --card: oklch(27.68% 0.0000 0); /* #282828 */
+  --card-foreground: oklch(94.31% 0.0000 0); /* #ececec */
+  --popover: oklch(27.68% 0.0000 0); /* #282828 */
+  --popover-foreground: oklch(94.31% 0.0000 0); /* #ececec */
+  --primary: oklch(73.13% 0.0688 17.71); /* #d09798 */
   --primary-foreground: oklch(0.00% 0.0000 0); /* #000000 */
-  --secondary: oklch(74.15% 0.0110 247.98); /* #a6acb2 */
+  --secondary: oklch(74.12% 0.0000 0); /* #ababab */
   --secondary-foreground: oklch(0.00% 0.0000 0); /* #000000 */
-  --muted: oklch(29.89% 0.0246 258.35); /* #262e3a */
-  --muted-foreground: oklch(72.99% 0.0085 253.87); /* #a4a8ad */
-  --accent: oklch(39.39% 0.0941 29.10); /* #702f27 */
-  --accent-foreground: oklch(94.48% 0.0153 22.40); /* #f7e9e8 */
+  --muted: oklch(30.12% 0.0000 0); /* #2e2e2e */
+  --muted-foreground: oklch(73.16% 0.0000 0); /* #a8a8a8 */
+  --accent: oklch(39.45% 0.1013 25.99); /* #732c28 */
+  --accent-foreground: oklch(94.41% 0.0098 17.33); /* #f3eaea */
   --destructive: oklch(65.99% 0.1321 21.29); /* #d76e6e */
   --destructive-foreground: oklch(0.00% 0.0000 0); /* #000000 */
-  --border: oklch(60.39% 0.0128 252.15); /* #7c8289 */
-  --input: oklch(43.12% 0.0181 251.35); /* #49515a */
-  --ring: oklch(94.26% 0.0017 247.84); /* #ebeced */
-  --radius: 0.25rem;
+  --border: oklch(94.31% 0.0000 0); /* #ececec */
+  --input: oklch(43.13% 0.0000 0); /* #505050 */
+  --ring: oklch(73.13% 0.0688 17.71); /* #d09798 */
+  --radius: 624.9375rem;
 }
 
 @layer base {

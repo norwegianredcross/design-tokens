@@ -729,7 +729,7 @@
     "link": {
       "visited": {
         "$type": "color",
-        "$value": "#b49acd"
+        "$value": "#e3c2c3"
       }
     },
     "focus": {
@@ -739,7 +739,99 @@
       },
       "outer": {
         "$type": "color",
-        "$value": "#ececec"
+        "$value": "{theme.secondary-color-rust.12}"
+      }
+    },
+    "secondary-color-warm-beige": {
+      "1": {
+        "$type": "color",
+        "$value": "#1a160e"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "#241d12"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#2d2516"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#3a2f1b"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#493a20"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#5c4826"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "#9a7e4b"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "#ba985f"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "#d5b778"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "#ba985f"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "#f4e7c9"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "#c9a462"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "#b28e4e"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "#9a7537"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "#2a2113"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "#000000"
+      }
+    }
+  },
+  "primitive": {
+    "secondary-color-rust": {
+      "text-on-base": {
+        "$type": "color",
+        "$value": "#000000"
+      },
+      "text-on-selected": {
+        "$type": "color",
+        "$value": "#000000"
+      }
+    },
+    "logo": {
+      "background": {
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "wordmark": {
+        "$type": "color",
+        "$value": "#1e1e1e"
+      },
+      "cross": {
+        "$type": "color",
+        "$value": "#d52b1e"
       }
     }
   }

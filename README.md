@@ -1,6 +1,74 @@
 # Røde Kors Design Tokens
 
-This repository is the central source for all design tokens (colors, typography, spacing, etc.) for the Norwegian Red Cross's digital products. It acts as a single source of truth that automatically distributes style changes to all connected projects.
+## Source of truth and building
+
+The authoritative design is [Figma Components — Main](https://www.figma.com/design/zCMN259qfgUaA5zTAXq5hQ/02.-Components), read through Figma MCP and revalidated on 2026-10-10.
+`test/fixtures/figma-main.json` contains all 910 variables from its six local
+collections. The previous branch and Desktop export are historical references.
+
+`design-tokens/` contains the Digdir sources. Generated files are only written by
+the build, never edited by hand:
+
+```sh
+npm ci
+npm run build
+npm test
+```
+
+The build uses the pinned official Digdir 1.18.0 `tokens build` command. Its output
+is in `design-tokens-build/digdir/`. The public theme entry points import it plus
+`figma.css`, which preserves Figma's explicit size scales. Bootstrap, shadcn,
+metadata and legacy `dist/` entries are rebuilt from the compiled tokens.
+
+To import a newly reviewed Main MCP snapshot into the source files:
+
+```sh
+node scripts/import-figma-main.js
+npm run build
+npm test
+```
+
+Review the snapshot before importing. The importer updates colors, aliases,
+border widths and typography modes. Spacing, radii and text-style metrics are
+verified against Main by tests; review those sources if a future snapshot changes
+them. Do not run `tokens create` during a normal build: it bootstraps sources and
+cannot preserve every Figma alias or contextual mode. The config records palette
+values but is not a replacement for the complete checked-in token sources.
+
+Main's color contexts map to CSS selectors as follows:
+
+| Figma Main mode | `data-color` |
+| --- | --- |
+| Hoved · beige (default) | `hoved-beige` |
+| Hoved · rosa | `hoved-rosa` |
+| Hoved · mint | `hoved-mint` |
+| Hoved · lyseblå | `hoved-lysebla` |
+| Hoved Nøytral | `hoved-neutral` |
+| Nøytral | `neutral` |
+| Danger / Warning / Success / Info | `danger` / `warning` / `success` / `info` |
+
+These are contextual aliases, not interchangeable palette names. For example,
+Hoved · rosa changes the tinted background while retaining rust action colors.
+The underlying palettes remain available: `red-cta`, `rust-main`,
+`secondary-color-warm-beige`, `secondary-color-orange`, `secondary-color-pink`,
+`additional-color-ocean`, and `additional-color-jungle`. Existing
+`primary-color-red` and `secondary-color-rust` names remain compatibility aliases
+for `red-cta` and `rust-main`.
+
+Both themes use Source Sans 3 for `primary`, `secondary`, and `header` typography
+modes, exactly as Main's variables specify. Main's seven saved heading text styles
+still name Source Serif 4; that inconsistency is recorded in the snapshot. The
+package follows the variable tokens and the explicit Source Sans 3 requirement.
+Named text-style sizes, weights, line heights and tracking match Main.
+
+Tests resolve every semantic color and all ten contextual color modes through the
+compiled CSS for both themes and both schemes. They also check the three size
+scales, radii, borders, opacity, typography, compatibility aliases and entry points.
+
+Import `rk-designsystem/styles` for React component CSS and packaged fonts.
+Tokens alone do not establish complete component or layout parity. The component
+measurements in `audit/after/` refer to the previous branch; Main token validation
+is recorded separately in `audit/main/`.
 
 ---
 
@@ -24,15 +92,14 @@ npm install rk-designsystem @digdir/designsystemet-css rk-design-tokens
 
 #### 2. Import CSS
 
-In your application's root layout file (e.g., `layout.tsx`), import the base stylesheet before the Røde Kors theme file. This order is crucial.
+In your application's root layout file (e.g., `layout.tsx`), import the component package's stylesheet.
 
 **TypeScript**
 
 ```typescript
 // src/app/layout.tsx (or equivalent)
 
-import '@digdir/designsystemet-css/index.css';         // 1. Base component styles
-import 'rk-design-tokens/design-tokens-build/brand-1.css'; // 2. Røde Kors theme override
+import 'rk-designsystem/styles'; // Digdir + theme + Røde Kors component styles + fonts
 
 export default function RootLayout({ children }) {
   return (
@@ -218,15 +285,18 @@ This gives you flexibility: use the token CSS directly for global theming (appro
 
 #### Brief Explanation
 
-This workflow establishes a fully automated pipeline that connects our design process directly to our live production applications. When a designer updates the brand style in Figma, this system automatically builds, versions, and publishes a new style package to npm. It then signals our Vercel projects, which automatically update themselves and redeploy with the new styles.
+This workflow builds, versions, and publishes the package when theme configuration
+changes are pushed to main. Designers and developers agree on the changes, update
+the configuration, and pull the generated tokens into Figma through Tokens Studio.
+After publishing, the workflow signals the consuming projects to update.
 
 #### Flowchart
 
 ```mermaid
 graph TD
     subgraph "Phase 1: Design & Publish"
-        A[Designer updates styles in Figma] --> B{Token Studio Plugin};
-        B -->|1. Push JSON files| C[rk-design-tokens GitHub Repo];
+        A[Designer and developer agree on theme changes] --> B[Update theme configuration];
+        B -->|1. Push config changes| C[rk-design-tokens GitHub Repo];
         C -->|2. Triggers on push| D[Publisher GitHub Action];
         D -->|3. Build CSS| D;
         D -->|4. Commit CSS| D;
@@ -256,11 +326,11 @@ graph TD
 
 This phase occurs within the `rk-design-tokens` repository.
 
-*   **Design in Figma:** A designer makes a change to a color, font, or any other design token.
-*   **Push to GitHub:** Using the Token Studio plugin, the designer pushes the changes. This automatically commits the updated JSON files to the main branch.
+*   **Agree on design changes:** A designer and developer identify the theme changes.
+*   **Update sources:** Import the reviewed Main snapshot into `design-tokens/`, update the configuration and adapter as needed, then run the official build and tests. Generated files must not be edited by hand.
 *   **Trigger the Publisher Workflow:** This push instantly triggers the GitHub Action defined in `.github/workflows/publish.yml`.
 *   **Build & Commit Artifacts:** The workflow runs `npm run build` to generate CSS from the JSON files and commits the results.
-*   **Versioning & Release:** The workflow runs `npm version patch` to bump the version, create a release commit, and tag it.
+*   **Versioning & Release:** Before submitting a reproducible, checked-in build, run `npm version patch --no-git-tag-version` and commit `package.json` and `package-lock.json` with the sources and generated output. The workflow publishes that unpublished version even when rebuilding produces no diff, and creates its tag. If CI itself produces changed output for an already published version, it bumps the patch version. Registry/network errors stop the release.
 *   **Publish to npm:** Finally, the workflow publishes the new version of the package to the npm registry.
 
 ##### Phase 2: Notifying the Applications (The "Signal")
@@ -276,4 +346,4 @@ This phase runs in parallel for consumer projects.
 *   **Commit & Push the Update:** The workflow commits the updated `package-lock.json` file.
 *   **Vercel Auto-Deploys:** Vercel's Git integration detects the new commit and automatically starts a new deployment.
 
-Within minutes of the designer pushing a change in Figma, all live websites are updated with the new styles, completing the fully automated, end-to-end cycle.
+Publishing tokens signals the configured downstream repositories. Their own workflows and release checks determine when applications receive the update; publishing tokens does not prove a production deployment or component parity.

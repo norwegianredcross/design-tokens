@@ -1,0 +1,62 @@
+[
+  {
+    "capturedAt": "2026-10-10T01:24:43.675Z",
+    "variables": 100,
+    "modeValues": 166,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:07.267Z",
+    "variables": 100,
+    "modeValues": 203,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:07.912Z",
+    "variables": 100,
+    "modeValues": 184,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:08.579Z",
+    "variables": 100,
+    "modeValues": 200,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:08.696Z",
+    "variables": 100,
+    "modeValues": 169,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:09.427Z",
+    "variables": 100,
+    "modeValues": 200,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:09.619Z",
+    "variables": 100,
+    "modeValues": 199,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:10.472Z",
+    "variables": 100,
+    "modeValues": 206,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:11.302Z",
+    "variables": 100,
+    "modeValues": 200,
+    "differences": []
+  },
+  {
+    "capturedAt": "2026-10-10T01:25:11.965Z",
+    "variables": 10,
+    "modeValues": 23,
+    "differences": []
+  }
+]

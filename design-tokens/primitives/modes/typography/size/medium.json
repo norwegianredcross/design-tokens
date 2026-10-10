@@ -1,4 +1,46 @@
 {
+  "font-size": {
+    "1": {
+      "$type": "fontSizes",
+      "$value": 12
+    },
+    "2": {
+      "$type": "fontSizes",
+      "$value": 14
+    },
+    "3": {
+      "$type": "fontSizes",
+      "$value": 16
+    },
+    "4": {
+      "$type": "fontSizes",
+      "$value": 18
+    },
+    "5": {
+      "$type": "fontSizes",
+      "$value": 21
+    },
+    "6": {
+      "$type": "fontSizes",
+      "$value": 24
+    },
+    "7": {
+      "$type": "fontSizes",
+      "$value": 30
+    },
+    "8": {
+      "$type": "fontSizes",
+      "$value": 36
+    },
+    "9": {
+      "$type": "fontSizes",
+      "$value": 48
+    },
+    "10": {
+      "$type": "fontSizes",
+      "$value": 60
+    }
+  },
   "line-height": {
     "sm": {
       "$type": "lineHeights",
@@ -11,48 +53,6 @@
     "lg": {
       "$type": "lineHeights",
       "$value": "170%"
-    }
-  },
-  "font-size": {
-    "1": {
-      "$type": "fontSizes",
-      "$value": "12"
-    },
-    "2": {
-      "$type": "fontSizes",
-      "$value": "14"
-    },
-    "3": {
-      "$type": "fontSizes",
-      "$value": "16"
-    },
-    "4": {
-      "$type": "fontSizes",
-      "$value": "18"
-    },
-    "5": {
-      "$type": "fontSizes",
-      "$value": "21"
-    },
-    "6": {
-      "$type": "fontSizes",
-      "$value": "24"
-    },
-    "7": {
-      "$type": "fontSizes",
-      "$value": "30"
-    },
-    "8": {
-      "$type": "fontSizes",
-      "$value": "36"
-    },
-    "9": {
-      "$type": "fontSizes",
-      "$value": "48"
-    },
-    "10": {
-      "$type": "fontSizes",
-      "$value": "60"
     }
   },
   "letter-spacing": {

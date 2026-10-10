@@ -51,7 +51,7 @@
   {
     "id": "76905ba554a0462da8d2df163a1943c87f2c6654",
     "$figmaCollectionId": "VariableCollectionId:36528:61712",
-    "$figmaModeId": "40960:7",
+    "$figmaModeId": "15758:0",
     "name": "konferansesenter",
     "selectedTokenSets": {
       "themes/konferansesenter": "enabled"
@@ -72,7 +72,7 @@
   {
     "id": "264b8bd1d40b364e1ea3acf09e49795ddd4c513c",
     "$figmaCollectionId": "VariableCollectionId:36248:20769",
-    "$figmaModeId": "36248:3",
+    "$figmaModeId": "44797:0",
     "name": "Secondary",
     "selectedTokenSets": {
       "primitives/modes/typography/secondary/theme": "enabled",
@@ -114,91 +114,186 @@
     "group": "Semantic"
   },
   {
-    "id": "eb2ff2a014408920920c55cf4c98a1e8cbe9a349",
-    "name": "primary-color-red",
+    "id": "figma-branch-header",
+    "$figmaCollectionId": "VariableCollectionId:36248:20769",
+    "$figmaModeId": "17692:0",
+    "name": "Header",
     "selectedTokenSets": {
-      "semantic/color/primary-color-red": "enabled"
+      "primitives/modes/typography/header/theme": "enabled",
+      "primitives/modes/typography/header/konferansesenter": "enabled"
     },
-    "group": "Color"
+    "group": "Typography"
   },
   {
-    "id": "039963c1542b1fb948823fc8784e643bbef4a734",
-    "name": "secondary-color-orange",
+    "id": "figma-main-hoved-beige",
+    "name": "hoved-beige",
+    "group": "Color",
     "selectedTokenSets": {
-      "semantic/color/secondary-color-orange": "enabled"
+      "semantic/color/hoved-beige": "enabled"
     },
-    "group": "Color"
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "15792:2"
   },
   {
-    "id": "5363c7a6913d5d4210612990e461d98ff6abe0ae",
-    "name": "secondary-color-rust",
-    "selectedTokenSets": {
-      "semantic/color/secondary-color-rust": "enabled"
-    },
-    "group": "Color"
-  },
-  {
-    "id": "82770e41c2f5bd7514008f076b9313453bae2462",
-    "name": "secondary-color-pink",
-    "selectedTokenSets": {
-      "semantic/color/secondary-color-pink": "enabled"
-    },
-    "group": "Color"
-  },
-  {
-    "id": "cb2176496076637e74e6fa5f15743a5c3b5aaaa9",
-    "name": "additional-color-ocean",
-    "selectedTokenSets": {
-      "semantic/color/additional-color-ocean": "enabled"
-    },
-    "group": "Color"
-  },
-  {
-    "id": "7d370aeca0004cd5f50190a1d2932400da1aea47",
-    "name": "additional-color-jungle",
-    "selectedTokenSets": {
-      "semantic/color/additional-color-jungle": "enabled"
-    },
-    "group": "Color"
-  },
-  {
-    "id": "e7fb41a6a0544d8a8aa178232034311f9d725555",
+    "id": "figma-main-neutral",
     "name": "neutral",
+    "group": "Color",
     "selectedTokenSets": {
       "semantic/color/neutral": "enabled"
     },
-    "group": "Color"
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "17344:0"
   },
   {
-    "id": "59bd0a3ff43b32849b319e645d4798d8a5d1e889",
-    "name": "info",
-    "selectedTokenSets": {
-      "semantic/color/info": "enabled"
-    },
-    "group": "Color"
-  },
-  {
-    "id": "53a5687cb26dc41f2ab4033e97e13adefd3740d6",
-    "name": "success",
-    "selectedTokenSets": {
-      "semantic/color/success": "enabled"
-    },
-    "group": "Color"
-  },
-  {
-    "id": "383fd7bf84aa027bdc40159c5d7c5805664a8eb2",
-    "name": "warning",
-    "selectedTokenSets": {
-      "semantic/color/warning": "enabled"
-    },
-    "group": "Color"
-  },
-  {
-    "id": "222b3e11200d82d61f1b89533e59175f71d23972",
+    "id": "figma-main-danger",
     "name": "danger",
+    "group": "Color",
     "selectedTokenSets": {
       "semantic/color/danger": "enabled"
     },
-    "group": "Color"
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "17344:4"
+  },
+  {
+    "id": "figma-main-warning",
+    "name": "warning",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/warning": "enabled"
+    },
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "17344:3"
+  },
+  {
+    "id": "figma-main-success",
+    "name": "success",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/success": "enabled"
+    },
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "17344:2"
+  },
+  {
+    "id": "figma-main-info",
+    "name": "info",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/info": "enabled"
+    },
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "17344:1"
+  },
+  {
+    "id": "figma-main-hoved-rosa",
+    "name": "hoved-rosa",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/hoved-rosa": "enabled"
+    },
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "20593:0"
+  },
+  {
+    "id": "figma-main-hoved-mint",
+    "name": "hoved-mint",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/hoved-mint": "enabled"
+    },
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "20593:1"
+  },
+  {
+    "id": "figma-main-hoved-lysebla",
+    "name": "hoved-lysebla",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/hoved-lysebla": "enabled"
+    },
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "20593:2"
+  },
+  {
+    "id": "figma-main-hoved-neutral",
+    "name": "hoved-neutral",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/hoved-neutral": "enabled"
+    },
+    "$figmaCollectionId": "VariableCollectionId:40350:32139",
+    "$figmaModeId": "20768:0"
+  },
+  {
+    "id": "palette-red-cta",
+    "name": "red-cta",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/red-cta": "enabled"
+    }
+  },
+  {
+    "id": "palette-secondary-color-orange",
+    "name": "secondary-color-orange",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/secondary-color-orange": "enabled"
+    }
+  },
+  {
+    "id": "palette-rust-main",
+    "name": "rust-main",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/rust-main": "enabled"
+    }
+  },
+  {
+    "id": "palette-secondary-color-pink",
+    "name": "secondary-color-pink",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/secondary-color-pink": "enabled"
+    }
+  },
+  {
+    "id": "palette-additional-color-ocean",
+    "name": "additional-color-ocean",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/additional-color-ocean": "enabled"
+    }
+  },
+  {
+    "id": "palette-additional-color-jungle",
+    "name": "additional-color-jungle",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/additional-color-jungle": "enabled"
+    }
+  },
+  {
+    "id": "palette-secondary-color-warm-beige",
+    "name": "secondary-color-warm-beige",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/secondary-color-warm-beige": "enabled"
+    }
+  },
+  {
+    "id": "palette-primary-color-red",
+    "name": "primary-color-red",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/primary-color-red": "enabled"
+    }
+  },
+  {
+    "id": "palette-secondary-color-rust",
+    "name": "secondary-color-rust",
+    "group": "Color",
+    "selectedTokenSets": {
+      "semantic/color/secondary-color-rust": "enabled"
+    }
   }
 ]

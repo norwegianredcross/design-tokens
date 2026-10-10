@@ -10,32 +10,32 @@ $white: #fff;
 $black: #000;
 
 // --- Light Theme Static Colors
-$light-primary: #D52B1E;
 $light-secondary: #355770;
 $light-body-bg: #ffffff;
 $light-dark: #ffffff;
 $light-light: #e8e8e8;
-$light-border-color: #797979;
+$light-border-color: #2b2b2b;
 $light-body-color: #2b2b2b;
-$light-info: #0A71C0;
+$light-info: #0a71c0;
 $light-success: #068718;
-$light-warning: #EA9B1B;
-$light-danger: #C01B1B;
+$light-warning: #ea9b1b;
+$light-danger: #ee0000;
+$light-primary: #96171a;
 $light-border-radius: var(--ds-border-radius-base);
-$light-font-family-base: Inter;
+$light-font-family-base: Source Sans 3;
 
 // --- Dark Theme Static Colors
-$dark-primary: #dc4f44;
 $dark-secondary: #8b9fad;
 $dark-body-bg: #181818;
 $dark-dark: #282828;
 $dark-light: #2e2e2e;
-$dark-border-color: #818181;
+$dark-border-color: #ececec;
 $dark-body-color: #ececec;
 $dark-info: #2d85c9;
 $dark-success: #138d24;
 $dark-warning: #60400b;
 $dark-danger: #d76e6e;
+$dark-primary: #d09798;
 
 // ==========================================================================
 // Part 2: Map Bootstrap's Sass Variables (Defaulting to Light Theme)
@@ -71,7 +71,6 @@ $theme-colors: (
 // Part 3: Generate Dynamic CSS Variables for Browser Theming
 // ==========================================================================
 :root {
-  --bs-primary: #{$light-primary};
   --bs-secondary: #{$light-secondary};
   --bs-body-bg: #{$light-body-bg};
   --bs-dark: #{$light-dark};
@@ -82,9 +81,9 @@ $theme-colors: (
   --bs-success: #{$light-success};
   --bs-warning: #{$light-warning};
   --bs-danger: #{$light-danger};
+  --bs-primary: #{$light-primary};
 
   &[data-bs-theme="dark"] {
-    --bs-primary: #{$dark-primary};
     --bs-secondary: #{$dark-secondary};
     --bs-body-bg: #{$dark-body-bg};
     --bs-dark: #{$dark-dark};
@@ -95,5 +94,6 @@ $theme-colors: (
     --bs-success: #{$dark-success};
     --bs-warning: #{$dark-warning};
     --bs-danger: #{$dark-danger};
+    --bs-primary: #{$dark-primary};
   }
 }

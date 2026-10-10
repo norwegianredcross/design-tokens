@@ -1,0 +1,8 @@
+/* Public entry point: official Digdir output plus exact Figma Main size scales. */
+@import './digdir/theme.css';
+@import './figma.css';
+
+/* All Main typography variable modes use Source Sans 3. Quote numeric family names. */
+:root, [data-typography], :root[data-typography="header"] {
+  --ds-font-family: "Source Sans 3";
+}
