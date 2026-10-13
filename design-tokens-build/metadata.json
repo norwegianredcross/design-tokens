@@ -4,64 +4,64 @@
     "semantic": {
       "size": {
         "0": {
-          "value": "round(down, calc(var(--ds-size-unit) * 0), 1px)"
+          "value": "var(--ds-size--md, 0rem) var(--ds-size--lg, 0rem) var(--ds-size--sm, 0rem)"
         },
         "1": {
-          "value": "round(down, calc(var(--ds-size-unit) * 1), 1px)"
+          "value": "var(--ds-size--md, 0.25rem) var(--ds-size--lg, 0.25rem) var(--ds-size--sm, 0.1875rem)"
         },
         "2": {
-          "value": "round(down, calc(var(--ds-size-unit) * 2), 1px)"
+          "value": "var(--ds-size--md, 0.5rem) var(--ds-size--lg, 0.5625rem) var(--ds-size--sm, 0.4375rem)"
         },
         "3": {
-          "value": "round(down, calc(var(--ds-size-unit) * 3), 1px)"
+          "value": "var(--ds-size--md, 0.75rem) var(--ds-size--lg, 0.875rem) var(--ds-size--sm, 0.625rem)"
         },
         "4": {
-          "value": "round(down, calc(var(--ds-size-unit) * 4), 1px)"
+          "value": "var(--ds-size--md, 1rem) var(--ds-size--lg, 1.125rem) var(--ds-size--sm, 0.875rem)"
         },
         "5": {
-          "value": "round(down, calc(var(--ds-size-unit) * 5), 1px)"
+          "value": "var(--ds-size--md, 1.25rem) var(--ds-size--lg, 1.4375rem) var(--ds-size--sm, 1.0625rem)"
         },
         "6": {
-          "value": "round(down, calc(var(--ds-size-unit) * 6), 1px)"
+          "value": "var(--ds-size--md, 1.5rem) var(--ds-size--lg, 1.75rem) var(--ds-size--sm, 1.3125rem)"
         },
         "7": {
-          "value": "round(down, calc(var(--ds-size-unit) * 7), 1px)"
+          "value": "var(--ds-size--md, 1.75rem) var(--ds-size--lg, 2rem) var(--ds-size--sm, 1.5rem)"
         },
         "8": {
-          "value": "round(down, calc(var(--ds-size-unit) * 8), 1px)"
+          "value": "var(--ds-size--md, 2rem) var(--ds-size--lg, 2.3125rem) var(--ds-size--sm, 1.75rem)"
         },
         "9": {
-          "value": "round(down, calc(var(--ds-size-unit) * 9), 1px)"
+          "value": "var(--ds-size--md, 2.25rem) var(--ds-size--lg, 2.625rem) var(--ds-size--sm, 2rem)"
         },
         "10": {
-          "value": "round(down, calc(var(--ds-size-unit) * 10), 1px)"
+          "value": "var(--ds-size--md, 2.5rem) var(--ds-size--lg, 2.875rem) var(--ds-size--sm, 2.1875rem)"
         },
         "11": {
-          "value": "round(down, calc(var(--ds-size-unit) * 11), 1px)"
+          "value": "var(--ds-size--md, 2.75rem) var(--ds-size--lg, 3.1875rem) var(--ds-size--sm, 2.4375rem)"
         },
         "12": {
-          "value": "round(down, calc(var(--ds-size-unit) * 12), 1px)"
+          "value": "var(--ds-size--md, 3rem) var(--ds-size--lg, 3.5rem) var(--ds-size--sm, 2.625rem)"
         },
         "13": {
-          "value": "round(down, calc(var(--ds-size-unit) * 13), 1px)"
+          "value": "var(--ds-size--md, 3.25rem) var(--ds-size--lg, 3.75rem) var(--ds-size--sm, 2.875rem)"
         },
         "14": {
-          "value": "round(down, calc(var(--ds-size-unit) * 14), 1px)"
+          "value": "var(--ds-size--md, 3.5rem) var(--ds-size--lg, 4.0625rem) var(--ds-size--sm, 3.0625rem)"
         },
         "15": {
-          "value": "round(down, calc(var(--ds-size-unit) * 15), 1px)"
+          "value": "var(--ds-size--md, 3.75rem) var(--ds-size--lg, 4.375rem) var(--ds-size--sm, 3.3125rem)"
         },
         "18": {
-          "value": "round(down, calc(var(--ds-size-unit) * 18), 1px)"
+          "value": "var(--ds-size--md, 4.5rem) var(--ds-size--lg, 5.25rem) var(--ds-size--sm, 4rem)"
         },
         "22": {
-          "value": "round(down, calc(var(--ds-size-unit) * 22), 1px)"
+          "value": "var(--ds-size--md, 5.5rem) var(--ds-size--lg, 6.375rem) var(--ds-size--sm, 4.875rem)"
         },
         "26": {
-          "value": "round(down, calc(var(--ds-size-unit) * 26), 1px)"
+          "value": "var(--ds-size--md, 6.5rem) var(--ds-size--lg, 7.5625rem) var(--ds-size--sm, 5.75rem)"
         },
         "30": {
-          "value": "round(down, calc(var(--ds-size-unit) * 30), 1px)"
+          "value": "var(--ds-size--md, 7.5rem) var(--ds-size--lg, 8.75rem) var(--ds-size--sm, 6.625rem)"
         },
         "value": "var(--ds-size--md)",
         "": {
@@ -89,7 +89,32 @@
           "value": "4"
         },
         "unit": {
-          "value": "calc(1rem * var(--ds-size-step) / var(--ds-size-base) * var(--ds-size-mode-font-size))"
+          "value": "calc(1rem * var(--ds-size-mode-font-size) * var(--ds-size-step) / var(--ds-size-base))"
+        }
+      },
+      "font": {
+        "weight": {
+          "regular": {
+            "italic": {
+              "style": {
+                "value": "italic"
+              }
+            }
+          },
+          "medium": {
+            "italic": {
+              "style": {
+                "value": "italic"
+              }
+            }
+          },
+          "bold": {
+            "italic": {
+              "style": {
+                "value": "italic"
+              }
+            }
+          }
         }
       },
       "border": {
@@ -143,6 +168,31 @@
         }
       },
       "theme": {
+        "font": {
+          "weight": {
+            "regular": {
+              "italic": {
+                "style": {
+                  "value": "italic"
+                }
+              }
+            },
+            "medium": {
+              "italic": {
+                "style": {
+                  "value": "italic"
+                }
+              }
+            },
+            "bold": {
+              "italic": {
+                "style": {
+                  "value": "italic"
+                }
+              }
+            }
+          }
+        },
         "italic": {
           "regular": {
             "value": "Italic"
@@ -159,6 +209,31 @@
         }
       },
       "konferansesenter": {
+        "font": {
+          "weight": {
+            "regular": {
+              "italic": {
+                "style": {
+                  "value": "italic"
+                }
+              }
+            },
+            "medium": {
+              "italic": {
+                "style": {
+                  "value": "italic"
+                }
+              }
+            },
+            "bold": {
+              "italic": {
+                "style": {
+                  "value": "italic"
+                }
+              }
+            }
+          }
+        },
         "italic": {
           "regular": {
             "value": "Italic"
@@ -1580,20 +1655,35 @@
         },
         "font": {
           "family": {
-            "value": "Source Sans 3"
+            "value": "\"Source Sans 3\""
           },
           "weight": {
             "medium": {
-              "value": "500"
+              "value": "500",
+              "italic": {
+                "weight": {
+                  "value": "500"
+                }
+              }
             },
             "regular": {
-              "value": "400"
+              "value": "400",
+              "italic": {
+                "weight": {
+                  "value": "400"
+                }
+              }
             },
             "semibold": {
               "value": "600"
             },
             "bold": {
-              "value": "700"
+              "value": "700",
+              "italic": {
+                "weight": {
+                  "value": "700"
+                }
+              }
             }
           }
         },
@@ -2028,20 +2118,35 @@
         },
         "font": {
           "family": {
-            "value": "Source Sans 3"
+            "value": "\"Source Sans 3\""
           },
           "weight": {
             "medium": {
-              "value": "500"
+              "value": "500",
+              "italic": {
+                "weight": {
+                  "value": "500"
+                }
+              }
             },
             "regular": {
-              "value": "400"
+              "value": "400",
+              "italic": {
+                "weight": {
+                  "value": "400"
+                }
+              }
             },
             "semibold": {
               "value": "600"
             },
             "bold": {
-              "value": "700"
+              "value": "700",
+              "italic": {
+                "weight": {
+                  "value": "700"
+                }
+              }
             }
           }
         },
@@ -2476,40 +2581,70 @@
         },
         "font": {
           "family": {
-            "value": "Source Sans 3"
+            "value": "\"Source Sans 3\""
           },
           "weight": {
             "medium": {
-              "value": "500"
+              "value": "500",
+              "italic": {
+                "weight": {
+                  "value": "500"
+                }
+              }
             },
             "regular": {
-              "value": "400"
+              "value": "400",
+              "italic": {
+                "weight": {
+                  "value": "400"
+                }
+              }
             },
             "semibold": {
               "value": "600"
             },
             "bold": {
-              "value": "700"
+              "value": "700",
+              "italic": {
+                "weight": {
+                  "value": "700"
+                }
+              }
             }
           }
         },
         "theme": {
           "font": {
             "family": {
-              "value": "Source Sans 3"
+              "value": "\"Source Sans 3\""
             },
             "weight": {
               "medium": {
-                "value": "500"
+                "value": "500",
+                "italic": {
+                  "weight": {
+                    "value": "500"
+                  }
+                }
               },
               "regular": {
-                "value": "400"
+                "value": "400",
+                "italic": {
+                  "weight": {
+                    "value": "400"
+                  }
+                }
               },
               "semibold": {
                 "value": "600"
               },
               "bold": {
-                "value": "700"
+                "value": "700",
+                "italic": {
+                  "weight": {
+                    "value": "700"
+                  }
+                }
               }
             }
           }
@@ -2517,20 +2652,35 @@
         "konferansesenter": {
           "font": {
             "family": {
-              "value": "Source Sans 3"
+              "value": "\"Source Sans 3\""
             },
             "weight": {
               "medium": {
-                "value": "500"
+                "value": "500",
+                "italic": {
+                  "weight": {
+                    "value": "500"
+                  }
+                }
               },
               "regular": {
-                "value": "400"
+                "value": "400",
+                "italic": {
+                  "weight": {
+                    "value": "400"
+                  }
+                }
               },
               "semibold": {
                 "value": "600"
               },
               "bold": {
-                "value": "700"
+                "value": "700",
+                "italic": {
+                  "weight": {
+                    "value": "700"
+                  }
+                }
               }
             }
           }

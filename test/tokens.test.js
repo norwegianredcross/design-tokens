@@ -1,19 +1,23 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const { execFileSync } = require('node:child_process');
 const test = require('node:test');
 const postcss = require('postcss');
-const branch = require('./fixtures/figma-main.json');
-const textStyles = branch.textStyles.map(s => ({...s, size: s.fontSize, font: s.fontName}));
+const snapshot = require('./fixtures/figma-main.json');
 const colorModes = require('./fixtures/figma-main-color-modes.json');
-const collections = Object.fromEntries(branch.collections.map(c => [c.name, c]));
-const variables = branch.variables.filter(v => branch.collections.some(c => c.id === v.collectionId));
-const byId = Object.fromEntries(variables.map(v => [v.id, v]));
-const members = name => variables.filter(v => v.collectionId === collections[name].id);
+const config = require('../designsystemet.config.json');
+const { buildSizeValues } = require('../scripts/build-size-values');
+const root = path.resolve(__dirname, '..');
+const cli = path.join(root, 'node_modules/.bin/designsystemet');
 const read = file => fs.readFileSync(file, 'utf8');
-function resolve(v, modes = {}, seen = []) {
-  assert.ok(v, 'Figma variable must exist');
-  assert.ok(!seen.includes(v.id), `Circular alias ${v.name}`);
-  const c = branch.collections.find(c => c.id === v.collectionId);
+const byId = Object.fromEntries(snapshot.variables.map(v => [v.id, v]));
+const collections = Object.fromEntries(snapshot.collections.map(c => [c.name, c]));
+const members = name => snapshot.variables.filter(v => v.collectionId === collections[name].id);
+function resolve(v, modes, seen = []) {
+  assert.ok(v && !seen.includes(v.id), 'valid, non-circular snapshot alias');
+  const c = snapshot.collections.find(c => c.id === v.collectionId);
   const mode = c.modes.find(m => m.name === modes[c.name]) ?? c.modes.find(m => m.modeId === c.defaultModeId);
   const value = v.values[mode.modeId];
   return value?.type === 'VARIABLE_ALIAS' ? resolve(byId[value.id], modes, [...seen, v.id]) : value;
@@ -25,142 +29,117 @@ function declarations(css, layerName) {
   });
   return values;
 }
-function cssValue(value, values) {
-  return value?.replace(/var\((--[\w-]+)\)/g, (_, name) => {
-    assert.ok(values[name], `Missing CSS reference ${name}`);
-    return cssValue(values[name], values);
-  });
+function tree(dir) {
+  return Object.fromEntries(fs.readdirSync(dir, { recursive: true }).sort()
+    .filter(f => fs.statSync(path.join(dir, f)).isFile())
+    .map(f => [f, read(path.join(dir, f))]));
 }
-const adapt = postcss.parse(read('styles/figma.css'));
-const sizeNames = { medium: 'md', large: 'lg', small: 'sm' };
+function generate(dir) {
+  execFileSync(cli, ['tokens', 'build', '--config', 'designsystemet.config.json', '--out-dir', 'design-tokens-build', '--clean'], { cwd: dir, stdio: 'pipe' });
+}
 
-test('the snapshot contains every variable in all six local Figma collections', () => {
-  assert.equal(variables.length, 910);
-  assert.equal(new Set(variables.map(v => v.id)).size, 910);
-  for (const c of branch.collections) assert.equal(members(c.name).length, c.count, c.name);
-  for (const v of variables) for (const value of Object.values(v.values)) {
-    if (value?.type === 'VARIABLE_ALIAS') assert.ok(byId[value.id], `${v.name}: alias target exists`);
-  }
+test('all 919 live Main source variables match their Figma values in every mode', () => {
+  execFileSync(process.execPath, ['scripts/audit-main-variables.js'], { cwd: root, stdio: 'pipe' });
+  const audit = JSON.parse(read('audit/main-source-correction/all-variable-checks.json'));
+  assert.equal(audit.variables, 919);
+  assert.deepEqual(audit.failures, []);
 });
-for (const theme of collections.Theme.modes.map(m => m.name)) {
-  const css = postcss.parse(read(`design-tokens-build/digdir/${theme}.css`));
-  for (const scheme of collections['Color scheme'].modes.map(m => m.name)) {
-    test(`${theme}/${scheme}: every semantic color matches the Figma Main`, () => {
-      const values = declarations(css, `ds.theme.color-scheme.${scheme.toLowerCase()}`);
+
+test('build preserves Digdir structure and compiles our source values reproducibly', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'tokens-main-build-'));
+  try {
+    fs.copyFileSync('designsystemet.config.json', path.join(dir, 'designsystemet.config.json'));
+    fs.cpSync('design-tokens', path.join(dir, 'design-tokens'), { recursive: true });
+    const before = tree(path.join(dir, 'design-tokens'));
+    generate(dir);
+    assert.deepEqual(tree(path.join(dir, 'design-tokens')), before);
+    // Only values of existing size declarations may differ from official output.
+    const structure = text => {
+      const ast = postcss.parse(text);
+      ast.walkDecls(d => { if (/^--ds-(font-size|size)-\d+$/.test(d.prop)) d.value = 'SIZE_VALUE'; });
+      return ast.toString();
+    };
+    for (const theme of ['theme', 'konferansesenter']) {
+      assert.equal(structure(read(path.join(dir, 'design-tokens-build', theme + '.css'))), structure(read(`design-tokens-build/${theme}.css`)));
+    }
+    buildSizeValues(path.join(dir, 'design-tokens'), path.join(dir, 'design-tokens-build'));
+    for (const f of ['theme.css', 'konferansesenter.css', 'types.d.ts', 'colors.d.ts']) {
+      assert.equal(read(path.join(dir, 'design-tokens-build', f)), read(path.join('design-tokens-build', f)), f);
+    }
+    fs.writeFileSync(path.join(dir, 'design-tokens-build/figma.css'), ':root { --ds-size-4: 999px; }');
+    const file = path.join(dir, 'design-tokens/semantic/style.json');
+    const semantic = JSON.parse(read(file));
+    semantic['border-width'].default.$value = '7px';
+    fs.writeFileSync(file, JSON.stringify(semantic));
+    const sizesFile = path.join(dir, 'design-tokens/primitives/modes/typography/size/small.json');
+    const sizes = JSON.parse(read(sizesFile));
+    sizes['font-size']['2'].$value = 17;
+    fs.writeFileSync(sizesFile, JSON.stringify(sizes));
+    generate(dir);
+    buildSizeValues(path.join(dir, 'design-tokens'), path.join(dir, 'design-tokens-build'));
+    assert.ok(!fs.existsSync(path.join(dir, 'design-tokens-build/figma.css')));
+    const css = postcss.parse(read(path.join(dir, 'design-tokens-build/theme.css')));
+    assert.equal(declarations(css, 'ds.theme.semantic')['--ds-border-width-default'], '7px');
+    assert.ok(declarations(css, 'ds.theme.type-scale')['--ds-font-size-2'].includes('var(--ds-size--sm, 1.0625rem)'), 'the build reads changed size values from JSON');
+    assert.ok(!require('../package.json').scripts.build.includes('create:tokens'), 'building must not reset customized sources');
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
+
+for (const theme of Object.keys(config.themes)) {
+  const css = postcss.parse(read(`design-tokens-build/${theme}.css`));
+  for (const scheme of ['light', 'dark']) {
+    test(`${theme}/${scheme}: Main semantic and contextual colors compile correctly`, () => {
+      const colors = declarations(css, `ds.theme.color-scheme.${scheme}`);
+      const modes = { Theme: theme, 'Color scheme': scheme === 'light' ? 'Light' : 'Dark' };
       for (const v of members('Semantic').filter(v => v.type === 'COLOR')) {
-        const prop = '--ds-' + v.name.replaceAll('/', '-');
-        assert.equal(values[prop]?.toLowerCase(), resolve(v, { Theme: theme, 'Color scheme': scheme }), prop);
+        assert.equal(colors['--ds-' + v.name.replaceAll('/', '-')], resolve(v, modes), v.name);
       }
-    });
-  }
-  test(`${theme}: exact radii, border widths, opacity and typography modes`, () => {
-    const values = declarations(css, 'ds.theme.semantic');
-    for (const v of members('Semantic').filter(v => /^border-(width|radius)\//.test(v.name))) {
-      const name = '--ds-' + v.name.replaceAll('/', '-');
-      const raw = cssValue(values[name], values);
-      assert.ok(raw, name);
-      const px = parseFloat(raw) * (raw.endsWith('rem') ? 16 : 1);
-      assert.equal(px, resolve(v, { Theme: theme }), name);
-    }
-    assert.equal(parseFloat(values['--ds-opacity-disabled']) / (values['--ds-opacity-disabled'].endsWith('%') ? 100 : 1), .3);
-    for (const typography of collections.Typography.modes.map(m => m.name)) {
-      const font = declarations(css, `ds.theme.typography.${typography.toLowerCase()}`);
-      for (const v of members('Theme').filter(v => v.name === 'font-family' || v.name.startsWith('font-weight/'))) {
-        const name = '--ds-' + v.name.replaceAll('/', '-');
-        let expected = resolve(v, { Theme: theme, Typography: typography });
-        expected = { Medium: '500', Regular: '400', 'Semi bold': '600', SemiBold: '600', Bold: '700' }[expected] ?? expected;
-        assert.equal(font[name], expected, name);
-      }
-      for (const size of ['2xs','xs','sm','md','lg','xl','2xl']) assert.equal(font[`--ds-heading-${size}-font-weight`], '500');
-    }
-  });
-  test(`${theme}: palette selectors reproduce every Figma Color mode`, () => {
-    const values = declarations(css, 'ds.theme.color');
-    const selectors = [];
-    css.walkRules(r => selectors.push(r.selector));
-    for (const mode of collections.Color.modes) {
-      assert.ok(selectors.some(s => s.includes(`[data-color="${colorModes[mode.name]}"]`)), mode.name);
-      const expected = Object.fromEntries(members('Color').map(v => [v.name, '{' + byId[v.values[mode.modeId].id].name.replaceAll('/','.') + '}']));
-      const source = JSON.parse(read(`design-tokens/semantic/color/${colorModes[mode.name]}.json`));
-      for (const [name,value] of Object.entries(expected)) assert.equal(source[name].$value, value);
-      const contextual = {};
-      css.walkRules(r => {
-        if (r.selector.includes(`[data-color="${colorModes[mode.name]}"]`)) r.walkDecls(d => { contextual[d.prop] = d.value; });
-      });
-      for (const scheme of ['Light', 'Dark']) {
-        const colors = declarations(css, `ds.theme.color-scheme.${scheme.toLowerCase()}`);
+      for (const mode of collections.Color.modes) {
+        const name = colorModes[mode.name];
+        const context = {};
+        css.walkRules(r => {
+          if (r.selector.includes(`[data-color="${name}"]`)) r.walkDecls(d => { context[d.prop] = d.value; });
+        });
         for (const v of members('Color')) {
           const prop = `--ds-color-${v.name}`;
-          assert.equal(cssValue(contextual[prop], colors), resolve(v, { Theme: theme, 'Color scheme': scheme, Color: mode.name }), `${theme}/${scheme}/${mode.name}/${v.name}`);
+          const reference = context[prop]?.match(/^var\((--[\w-]+)\)$/)?.[1];
+          assert.equal(colors[reference], resolve(v, { ...modes, Color: mode.name }), `${mode.name}/${v.name}`);
         }
       }
-    }
-    assert.ok(!read(`design-tokens-build/digdir/${theme}.css`).includes('undefined'));
-  });
-}
-for (const mode of collections.Size.modes) {
-  test(`${mode.name}: exact Figma font sizes and spacing in the shipped stylesheet`, () => {
-    const expectedSelector = `[data-size="${sizeNames[mode.name]}"]`;
-    const values = {};
-    adapt.walkRules(r => { if(r.selector.includes(expectedSelector)) r.walkDecls(d => {values[d.prop]=d.value;}); });
-    for (const v of members('Size').filter(v => v.name.startsWith('font-size/') || /^_size\/\d+$/.test(v.name))) {
-      const prop = '--ds-' + v.name.replace('_size/', 'size/').replaceAll('/','-');
-      assert.equal(parseFloat(values[prop]) * 16, v.values[mode.modeId], prop);
-    }
-  });
-}
-test('the token adapter contains variables only; components belong to rk-designsystem', () => {
-  adapt.walkDecls(d => assert.ok(d.prop.startsWith('--ds-'), d.prop));
-});
-test('all 22 named text styles match Main size, weight, line height and tracking', () => {
-  const css = postcss.parse(read('design-tokens-build/digdir/theme.css'));
-  const values = {...declarations(css, 'ds.theme.type-scale'), ...declarations(css, 'ds.theme.semantic'), ...declarations(css, 'ds.theme.typography.primary')};
-  adapt.walkRules(r => { if(r.selector.includes('[data-size="md"]')) r.walkDecls(d => { values[d.prop] = d.value; }); });
-  for (const style of textStyles) {
-    const prefix = '--ds-' + style.name.replace('typography/', '').replaceAll('/', '-');
-    const value = suffix => cssValue(values[prefix + '-' + suffix], values);
-    const size = parseFloat(value('font-size')) * 16;
-    assert.equal(size, style.size, style.name + ' size');
-    assert.equal(Number(value('font-weight')), style.font.variationSettings.wght, style.name + ' weight');
-    assert.ok(Math.abs(Number(value('line-height')) * 100 - style.lineHeight.value) < .001, style.name + ' line height');
-    assert.ok(Math.abs(parseFloat(value('letter-spacing')) * 100 - style.letterSpacing.value) < .001, style.name + ' tracking');
-  }
-});
-test('existing package entry points include official output and Main size scales', () => {
-  for (const theme of ['theme','konferansesenter']) {
-    const entry=read(`design-tokens-build/${theme}.css`);
-    assert.ok(entry.includes(`@import './digdir/${theme}.css'`));
-    assert.ok(entry.includes("@import './figma.css'"));
-    assert.match(entry, /--ds-font-family: "Source Sans 3"/);
-    assert.ok(!entry.includes('Source Serif 4'));
-  }
-  assert.equal(read('styles/figma.css'),read('design-tokens-build/figma.css'));
-  assert.equal(read('dist/figma.css'),read('styles/figma.css'));
-  assert.equal(read('dist/brand-1.css'),read('design-tokens-build/theme.css'));
-  for(const theme of ['theme','konferansesenter']) assert.equal(read(`dist/digdir/${theme}.css`),read(`design-tokens-build/digdir/${theme}.css`));
-  assert.ok(!require('../package.json').scripts.build.includes('create:tokens'), 'normal build must preserve the Figma source tokens');
-});
-test('metadata and framework colors use Main rather than the Desktop export', () => {
-  const metadata=JSON.parse(read('design-tokens-build/metadata.json'));
-  assert.equal(metadata.tokens.light.color.danger.surface.tinted.value,'#ffe0e0');
-  assert.equal(metadata.tokens.typography.header.font.family.value,'Source Sans 3');
-  for(const file of ['shadcn-theme.css','bootstrap-theme.scss']) assert.ok(!read(`design-tokens-build/${file}`).includes('undefined'));
-  assert.match(read('design-tokens-build/shadcn-theme.css'), /--primary: oklch\([^)]+\); \/\* #96171a \*\//i);
-});
-
-test('Main default context and compatibility aliases are compiled', () => {
-  for (const theme of ['theme', 'konferansesenter']) {
-    const css = postcss.parse(read(`design-tokens-build/digdir/${theme}.css`));
-    let defaults;
-    css.walkRules(r => {
-      if (r.selector === ':root, [data-color-scheme], [data-color="hoved-beige"]') defaults = r;
     });
-    assert.ok(defaults, 'Main default is Hoved · beige');
+  }
+  test(`${theme}: quoted Source Sans 3 and legacy palette names survive generation`, () => {
+    for (const mode of ['primary', 'secondary', 'header']) {
+      assert.equal(declarations(css, `ds.theme.typography.${mode}`)['--ds-font-family'], '"Source Sans 3"');
+    }
     for (const scheme of ['light', 'dark']) {
       const colors = declarations(css, `ds.theme.color-scheme.${scheme}`);
       for (const [legacy, current] of [['primary-color-red', 'red-cta'], ['secondary-color-rust', 'rust-main']]) {
         for (const v of members('Color')) assert.equal(colors[`--ds-color-${legacy}-${v.name}`], colors[`--ds-color-${current}-${v.name}`]);
       }
     }
+  });
+}
+
+test('package entry points are standalone generated CSS with no Figma adapter', () => {
+  for (const theme of ['theme', 'konferansesenter']) {
+    const css = postcss.parse(read(`design-tokens-build/${theme}.css`));
+    css.walkAtRules('import', rule => assert.fail(`unexpected import ${rule.params}`));
+    assert.ok(!read(`design-tokens-build/${theme}.css`).includes('undefined'));
   }
+  assert.equal(read('dist/brand-1.css'), read('design-tokens-build/theme.css'));
+  assert.equal(read('design-tokens-build/designsystemet.config.json'), read('designsystemet.config.json'));
+  for (const dir of ['dist', 'design-tokens-build']) {
+    assert.ok(!fs.existsSync(`${dir}/figma.css`));
+    assert.ok(!fs.existsSync(`${dir}/digdir`));
+  }
+});
+
+test('derived framework outputs and metadata read the generated public theme', () => {
+  const metadata = JSON.parse(read('design-tokens-build/metadata.json'));
+  assert.equal(metadata.tokens.light.color.danger.surface.tinted.value, '#ffe0e0');
+  assert.equal(metadata.tokens.typography.primary.font.family.value, '"Source Sans 3"');
+  for (const file of ['shadcn-theme.css', 'bootstrap-theme.scss']) assert.ok(!read(`design-tokens-build/${file}`).includes('undefined'));
+  assert.match(read('design-tokens-build/shadcn-theme.css'), /--primary: oklch\([^)]+\); \/\* #96171a \*\//i);
+  assert.match(read('design-tokens-build/bootstrap-theme.scss'), /\$light-primary: #96171a;/i);
 });

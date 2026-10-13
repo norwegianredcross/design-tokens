@@ -9,7 +9,7 @@ const set = require('lodash.set');
  * @returns {object} The structured metadata object.
  */
 async function buildMetadata() {
-  const sourceCssPath = path.join('design-tokens-build', 'digdir', 'theme.css');
+  const sourceCssPath = path.join('design-tokens-build', 'theme.css');
   const outputJsonPath = path.join('design-tokens-build', 'metadata.json');
   const packageJsonPath = path.join(__dirname, 'package.json');
 

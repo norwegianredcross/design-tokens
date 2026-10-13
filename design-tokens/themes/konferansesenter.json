@@ -829,6 +829,18 @@
     "bold": {
       "$type": "fontWeights",
       "$value": "{konferansesenter.font-weight.bold}"
+    },
+    "regular-italic": {
+      "$type": "fontWeights",
+      "$value": "{konferansesenter.font-weight.regular-italic}"
+    },
+    "medium-italic": {
+      "$type": "fontWeights",
+      "$value": "{konferansesenter.font-weight.medium-italic}"
+    },
+    "bold-italic": {
+      "$type": "fontWeights",
+      "$value": "{konferansesenter.font-weight.bold-italic}"
     }
   },
   "border-radius": {

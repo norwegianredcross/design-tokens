@@ -1,0 +1,89 @@
+Figma Main values with Digdir structure — 2026-10-13
+
+This supersedes audit/digdir-regeneration/report.txt. Reverting token values to
+Digdir defaults was incorrect. The required outcome is our Main values compiled
+into the existing Digdir structure.
+
+SOURCE EVIDENCE
+Figma MCP read file zCMN259qfgUaA5zTAXq5hQ (Main, not a branch) on 2026-10-13.
+There are 919 variables in its six local collections. All earlier 910 variables
+retain their saved values; nine italic font-style variables were added. Remote
+variables outside those collections are retained in the raw capture for provenance.
+
+The source audit checks all 919 local variables, covering
+1774 variable/mode values. All pass. Quotes around Source Sans 3
+are normalized as CSS syntax, not considered a different font. Numeric expressions
+and aliases are resolved before comparing with Main.
+
+WHAT CHANGED
+- Restored Main's token sources, including the 2px default border, custom names,
+  color contexts, typography modes and explicit size scales.
+- Added the nine new Main italic source variables. Digdir compiles their combined
+  font style names into separate weight/style properties (18 additional CSS names).
+- Source Sans 3 remains the only configured font family.
+- npm run build compiles checked-in token sources; it no longer calls tokens create
+  and therefore cannot overwrite Main values with generated defaults.
+- Reordered the equivalent size-unit multiplication/division expression to avoid
+  floating-point floor errors while resolving source values.
+- Public theme.css and konferansesenter.css remain standalone files. There is no
+  figma.css, nested digdir import, custom selector or component exception.
+- No component implementations were changed.
+
+EXPLICIT BUILD ADJUSTMENT
+The official Digdir compiler derives small/large fonts from the medium scale,
+ignoring the explicit per-mode font sizes in the source sets. Its rounded spacing
+can also differ across browser engines. This is why merely restoring source values
+was insufficient.
+
+After the official CLI runs, scripts/build-size-values.js reads the standard
+source sets selected by $themes.json, resolves their numeric values and aliases,
+and changes ONLY the values of existing numeric size and font-size declarations.
+It uses Digdir's already-generated --ds-size--sm/md/lg switches. It adds no CSS
+rules, selectors, layers or variables. The script contains no hardcoded design
+values. It fails if the expected Digdir output structure is missing.
+
+This is not an unmodified-CLI-output claim: it is a build-time value compilation
+step that preserves Digdir's structure. A regression test compares the complete
+output against official CLI output with only those size values masked. All other
+CSS must be identical. Another test changes source values and verifies the rebuilt
+output changes, without editing CSS. Independent builds are reproducible.
+
+CONSUMER VERIFICATION
+Both tokens and components were packed again and installed together from those
+local tarballs in a fresh consumer dependency installation. The lockfile points to
+these tarballs; this is not a claim that scoped versions are already on npm.
+TypeScript and production Vite bundling pass.
+
+Browsers: Chromium, Firefox and WebKit.
+Libraries: upstream Digdir components and the scoped Røde Kors component package.
+Themes: theme and konferansesenter. Schemes: light and dark. Sizes: sm, md and lg.
+
+12 page runs; 72 panels; 792 component measurements.
+14592 computed semantic/context color checks passed.
+1080 computed font-size/spacing checks against live Main passed.
+The secondary-button border is asserted to be 2px in every panel. Source Sans 3
+loads from the packaged component font files. Button clicks, text input, checkbox
+changes and disabled state pass. No page exceptions or failed requests occurred.
+The component token checker passes for 132 files and 617 definitions with no
+allowlist entries.
+
+A separate numeric-token comparison with the previous custom Main build records
+zero measured changes and zero removed CSS names across both themes and all three
+engines. The 18 added names are the compiled forms of the new Main italic variables.
+The exact scope and measurements are in token-changes.json. This is not a complete
+component screenshot-parity claim.
+
+REMAINING RELEASE VERIFICATION
+Full component/layout/state/viewport parity and accessibility compliance are not
+claimed. VoiceOver, TalkBack and physical iOS/Android device testing remain pending.
+No live Tokens Studio import or Figma write was performed. Temabygger can generate
+configuration/colors; review and merge its source changes while preserving the
+other Main tokens, as documented in README.md. Config-only regeneration is not
+sufficient to preserve every custom value.
+
+Nothing was committed, pushed or published. npm organization publication and the
+component repository's registry lockfile update remain separate release steps.
+
+Consumer project:
+/Users/daniel/Desktop/Jobb/RK/design-tokens-consumer-test
+Preview: http://127.0.0.1:6120/

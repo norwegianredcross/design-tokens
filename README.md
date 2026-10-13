@@ -1,13 +1,68 @@
 # Røde Kors Design Tokens
 
+## Moving to the Norwegian Red Cross npm organization
+
+The packages are moving to organization ownership. Version numbering continues;
+the package names change. Updating the old dependencies with `npm update` does
+not switch them to the organization scope.
+
+| Previous package | New package | Migration version |
+| --- | --- | --- |
+| `rk-design-tokens` | [`@norwegianredcross/design-tokens`](https://www.npmjs.com/package/@norwegianredcross/design-tokens) | `1.0.50` |
+| `rk-designsystem` | [`@norwegianredcross/designsystem`](https://www.npmjs.com/package/@norwegianredcross/designsystem) | `1.5.x` (normal release numbering continues) |
+
+**Release status:** these instructions are prepared for the migration. Run them
+after both scoped versions are available on npm.
+
+```sh
+npm view @norwegianredcross/design-tokens@1.0.50 version
+npm view @norwegianredcross/designsystem version
+npm uninstall rk-designsystem rk-design-tokens
+npm install @norwegianredcross/designsystem@^1.5.0
+```
+
+If the application imports tokens directly, also run:
+
+```sh
+npm install @norwegianredcross/design-tokens@^1.0.50
+```
+
+Replace component and style imports throughout the application:
+
+```tsx
+import { Button } from '@norwegianredcross/designsystem';
+import '@norwegianredcross/designsystem/styles';
+```
+
+The combined stylesheet includes Digdir styles, the theme, component styles and
+bundled Source Sans 3. Do not also import the token theme into the same application
+when using this combined stylesheet. A tokens-only consumer instead uses:
+
+```css
+@import '@norwegianredcross/design-tokens/design-tokens-build/theme.css';
+```
+
+Other token subpaths, such as `design-tokens-build/konferansesenter.css` and
+`design-tokens-build/shadcn-theme.css`, keep their paths under the new package name.
+Update package aliases, bundler configuration, dependency automation and any npm
+links as well. Commit the dependency and lockfile changes produced by npm; do not
+hand-edit lockfile registry URLs or integrity values. Run a clean install, the
+application build and its tests, then verify styles and fonts in the browser.
+Check the lockfile for old packages still required by other dependencies.
+Existing unscoped releases remain separate packages; their history does not move
+to the scoped names. This package migration does not implement the separately
+reviewed component appearance changes.
+
+
 ## Source of truth and building
 
-The authoritative design is [Figma Components — Main](https://www.figma.com/design/zCMN259qfgUaA5zTAXq5hQ/02.-Components), read through Figma MCP and revalidated on 2026-10-10.
-`test/fixtures/figma-main.json` contains all 910 variables from its six local
-collections. The previous branch and Desktop export are historical references.
+Our token **values** follow [Figma Components — Main](https://www.figma.com/design/zCMN259qfgUaA5zTAXq5hQ/02.-Components).
+The source format, CSS variable names, modes and public package entry points use
+Digdir's token system. Using Digdir's builder does not require keeping Digdir's
+default token values.
 
-`design-tokens/` contains the Digdir sources. Generated files are only written by
-the build, never edited by hand:
+`design-tokens/` contains the reviewed Tokens Studio/Digdir JSON sources. Build
+those sources with the pinned official Digdir 1.18.0 CLI:
 
 ```sh
 npm ci
@@ -15,60 +70,52 @@ npm run build
 npm test
 ```
 
-The build uses the pinned official Digdir 1.18.0 `tokens build` command. Its output
-is in `design-tokens-build/digdir/`. The public theme entry points import it plus
-`figma.css`, which preserves Figma's explicit size scales. Bootstrap, shadcn,
-metadata and legacy `dist/` entries are rebuilt from the compiled tokens.
+The build runs `tokens build --config designsystemet.config.json --out-dir
+design-tokens-build --clean`. It then compiles the explicit size-mode values from
+the same source JSON into existing size declarations, before generating framework
+mappings, metadata and legacy distribution copies. It does **not** run `tokens create`: doing so
+would replace customized source values with generated defaults.
 
-To import a newly reviewed Main MCP snapshot into the source files:
+`design-tokens-build/theme.css` and `konferansesenter.css` contain the compiled
+styles directly. There is no extra `figma.css`, nested CSS import or component
+patch. `dist/brand-1.css` is an unchanged copy of `theme.css`. Generated CSS must
+only be changed by building the token sources.
 
-```sh
-node scripts/import-figma-main.js
-npm run build
-npm test
-```
+### Temabygger and source updates
 
-Review the snapshot before importing. The importer updates colors, aliases,
-border widths and typography modes. Spacing, radii and text-style metrics are
-verified against Main by tests; review those sources if a future snapshot changes
-them. Do not run `tokens create` during a normal build: it bootstraps sources and
-cannot preserve every Figma alias or contextual mode. The config records palette
-values but is not a replacement for the complete checked-in token sources.
+Temabygger remains available for creating/updating the theme configuration and
+color palettes. Its `tokens create` step generates source tokens; `tokens build`
+compiles source tokens. They are different operations. The CLI configuration does
+not expose every customized source token, including our 2px default border.
 
-Main's color contexts map to CSS selectors as follows:
+When applying a new Temabygger export, generate its sources in a separate working
+copy, review and merge the intended source changes into `design-tokens/`, and
+build. Preserve the reviewed Main values for tokens outside that change. Running
+`npm run create:tokens` directly in this checkout replaces customized sources;
+use it only when intentionally regenerating and reviewing that source tree.
+The standard source files remain usable with Tokens Studio. No Figma edits are
+performed by the build.
 
-| Figma Main mode | `data-color` |
-| --- | --- |
-| Hoved · beige (default) | `hoved-beige` |
-| Hoved · rosa | `hoved-rosa` |
-| Hoved · mint | `hoved-mint` |
-| Hoved · lyseblå | `hoved-lysebla` |
-| Hoved Nøytral | `hoved-neutral` |
-| Nøytral | `neutral` |
-| Danger / Warning / Success / Info | `danger` / `warning` / `success` / `info` |
+Both themes use Source Sans 3. CSS quotes around the family name preserve its
+meaning and allow the digit in its name. Existing color contexts and palette
+aliases are retained. Live Main source checks cover 919 variables across all
+modes, captured through Figma MCP on 2026-10-13.
 
-These are contextual aliases, not interchangeable palette names. For example,
-Hoved · rosa changes the tinted background while retaining rust action colors.
-The underlying palettes remain available: `red-cta`, `rust-main`,
-`secondary-color-warm-beige`, `secondary-color-orange`, `secondary-color-pink`,
-`additional-color-ocean`, and `additional-color-jungle`. Existing
-`primary-color-red` and `secondary-color-rust` names remain compatibility aliases
-for `red-cta` and `rust-main`.
+Digdir's compiler calculates small/large font-size scales from the medium scale,
+which does not reproduce Main's explicit values. `scripts/build-size-values.js`
+therefore reads those values from the standard source sets and replaces only the
+values of existing `--ds-font-size-*` and numeric `--ds-size-*` declarations. It
+uses Digdir's existing size-mode switches. It does not add CSS rules, selectors,
+variables, an override layer, or component exceptions. No design values are
+hardcoded in that script. Tests verify that all remaining CSS is identical to
+Digdir's output and that a clean build reproduces the packaged files.
 
-Both themes use Source Sans 3 for `primary`, `secondary`, and `header` typography
-modes, exactly as Main's variables specify. Main's seven saved heading text styles
-still name Source Serif 4; that inconsistency is recorded in the snapshot. The
-package follows the variable tokens and the explicit Source Sans 3 requirement.
-Named text-style sizes, weights, line heights and tracking match Main.
+This is a documented build adjustment, not unmodified Digdir output. Source
+parity and rendered CSS parity are checked separately. The current verification
+report is [here](audit/main-source-correction/report.txt).
 
-Tests resolve every semantic color and all ten contextual color modes through the
-compiled CSS for both themes and both schemes. They also check the three size
-scales, radii, borders, opacity, typography, compatibility aliases and entry points.
-
-Import `rk-designsystem/styles` for React component CSS and packaged fonts.
-Tokens alone do not establish complete component or layout parity. The component
-measurements in `audit/after/` refer to the previous branch; Main token validation
-is recorded separately in `audit/main/`.
+Import `@norwegianredcross/designsystem/styles` for component CSS and packaged
+fonts. Tokens alone do not load fonts or establish complete component parity.
 
 ---
 
@@ -84,10 +131,10 @@ This is the primary way to use the tokens for official Røde Kors projects built
 
 #### 1. Installation
 
-You'll need three packages: the component library (`rk-designsystem`), the base styles from Digdir, and this theme package (`rk-design-tokens`).
+You'll need three packages: the component library (`@norwegianredcross/designsystem`), the base styles from Digdir, and this theme package (`@norwegianredcross/design-tokens`).
 
 ```bash
-npm install rk-designsystem @digdir/designsystemet-css rk-design-tokens
+npm install @norwegianredcross/designsystem @digdir/designsystemet-css @norwegianredcross/design-tokens
 ```
 
 #### 2. Import CSS
@@ -99,7 +146,7 @@ In your application's root layout file (e.g., `layout.tsx`), import the componen
 ```typescript
 // src/app/layout.tsx (or equivalent)
 
-import 'rk-designsystem/styles'; // Digdir + theme + Røde Kors component styles + fonts
+import '@norwegianredcross/designsystem/styles'; // Digdir + theme + Røde Kors component styles + fonts
 
 export default function RootLayout({ children }) {
   return (
@@ -129,7 +176,7 @@ In your project's main Sass file (e.g., `globals.scss`), import the Røde Kors t
 ```scss
 // 1. Import the Røde Kors theme file for Bootstrap.
 // This contains all the necessary variable overrides.
-@import "rk-design-tokens/design-tokens-build/bootstrap-theme.scss";
+@import "@norwegianredcross/design-tokens/design-tokens-build/bootstrap-theme.scss";
 
 // 2. Import the main Bootstrap library.
 // Bootstrap will now compile using your custom theme.
@@ -157,16 +204,16 @@ export default function RootLayout({ children }) {
 
 ### Using with shadcn/ui (Tailwind + shadcn)
 
-This section explains two common ways to use `rk-design-tokens` together with `shadcn/ui` (which uses Tailwind CSS and Radix): (A) import the generated CSS variables directly, or (B) map tokens into Tailwind’s theme so utility classes can reference them.
+This section explains two common ways to use `@norwegianredcross/design-tokens` together with `shadcn/ui` (which uses Tailwind CSS and Radix): (A) import the generated CSS variables directly, or (B) map tokens into Tailwind’s theme so utility classes can reference them.
 
 Pick the approach that fits your project.
 
-#### A) Import `rk-design-tokens` CSS (fast, minimal)
+#### A) Import `@norwegianredcross/design-tokens` CSS (fast, minimal)
 
 1.  **Installation**
 
     ```bash
-    npm install rk-design-tokens
+    npm install @norwegianredcross/design-tokens
     ```
 
 2.  Import token CSS in your global stylesheet or root layout before your app styles so the CSS variables and theme overrides are available to shadcn components.
@@ -176,7 +223,7 @@ Pick the approach that fits your project.
     ```typescript
     // src/app/layout.tsx (or equivalent)
 
-    import 'rk-design-tokens/design-tokens-build/shadcn-theme.css'; // import tokens first
+    import '@norwegianredcross/design-tokens/design-tokens-build/shadcn-theme.css'; // import tokens first
     import './globals.css'; // your Tailwind/shadcn global CSS
 
     export default function RootLayout({ children }) {
@@ -199,7 +246,7 @@ Pick the approach that fits your project.
 1.  **Installation**
 
     ```bash
-    npm install rk-design-tokens
+    npm install @norwegianredcross/design-tokens
     ```
 
 2.  Import tokens CSS (to expose CSS variables) and configure Tailwind to read CSS variables for colors and other tokens.
@@ -208,7 +255,7 @@ Pick the approach that fits your project.
 
         ```css
         /* src/styles/globals.css */
-        @import "rk-design-tokens/design-tokens-build/shadcn-theme.css";
+        @import "@norwegianredcross/design-tokens/design-tokens-build/shadcn-theme.css";
         
         /* Tailwind base */
         @tailwind base;
@@ -272,7 +319,7 @@ Pick the approach that fits your project.
 1.  **Install packages:**
 
     ```bash
-    npm install rk-design-tokens tailwindcss postcss autoprefixer
+    npm install @norwegianredcross/design-tokens tailwindcss postcss autoprefixer
     ```
 
 2.  Configure Tailwind as shown above and import token CSS in `globals`.
@@ -296,7 +343,7 @@ After publishing, the workflow signals the consuming projects to update.
 graph TD
     subgraph "Phase 1: Design & Publish"
         A[Designer and developer agree on theme changes] --> B[Update theme configuration];
-        B -->|1. Push config changes| C[rk-design-tokens GitHub Repo];
+        B -->|1. Push config changes| C[design-tokens GitHub Repo];
         C -->|2. Triggers on push| D[Publisher GitHub Action];
         D -->|3. Build CSS| D;
         D -->|4. Commit CSS| D;
@@ -309,7 +356,7 @@ graph TD
     end
 
     subgraph "Phase 3: Update & Deploy"
-        F --> G[rk-designsystem & rk-conference-demo Repos];
+        F --> G[DesignSystem & rk-conference-demo Repos];
         G -->|8. Run 'npm update'| G;
         G -->|9. Commit & Push package-lock.json| G;
         G -->|10. Triggers on push| H[Vercel];
@@ -324,10 +371,10 @@ graph TD
 
 ##### Phase 1: A Designer Makes a Change (The "Publisher")
 
-This phase occurs within the `rk-design-tokens` repository.
+This phase occurs within the `design-tokens` repository.
 
 *   **Agree on design changes:** A designer and developer identify the theme changes.
-*   **Update sources:** Import the reviewed Main snapshot into `design-tokens/`, update the configuration and adapter as needed, then run the official build and tests. Generated files must not be edited by hand.
+*   **Update configuration:** Review the Main token sources and any Temabygger configuration changes together. Merge generated color changes into the source tree while retaining the other reviewed values, then run `npm run build` and `npm test`. Generated files must not be edited by hand.
 *   **Trigger the Publisher Workflow:** This push instantly triggers the GitHub Action defined in `.github/workflows/publish.yml`.
 *   **Build & Commit Artifacts:** The workflow runs `npm run build` to generate CSS from the JSON files and commits the results.
 *   **Versioning & Release:** Before submitting a reproducible, checked-in build, run `npm version patch --no-git-tag-version` and commit `package.json` and `package-lock.json` with the sources and generated output. The workflow publishes that unpublished version even when rebuilding produces no diff, and creates its tag. If CI itself produces changed output for an already published version, it bumps the patch version. Registry/network errors stop the release.
@@ -335,15 +382,37 @@ This phase occurs within the `rk-design-tokens` repository.
 
 ##### Phase 2: Notifying the Applications (The "Signal")
 
-*   **Send a Dispatch Signal:** After a successful publish, the workflow sends a `repository_dispatch` signal to consumer projects like `rk-designsystem` to notify them of the new version.
+*   **Send a Dispatch Signal:** After a successful publish, the workflow sends a `repository_dispatch` signal to consumer projects like `@norwegianredcross/designsystem` to notify them of the new version.
 
 ##### Phase 3: Automatic Update and Redeployment (The "Consumers")
 
 This phase runs in parallel for consumer projects.
 
 *   **Trigger the Consumer Workflow:** The dispatch signal starts an "Update" workflow in the consumer projects.
-*   **Update Dependencies:** The workflow runs `npm update rk-design-tokens` to fetch the latest version.
+*   **Update Dependencies:** The workflow runs `npm update @norwegianredcross/design-tokens` to fetch the latest version.
 *   **Commit & Push the Update:** The workflow commits the updated `package-lock.json` file.
 *   **Vercel Auto-Deploys:** Vercel's Git integration detects the new commit and automatically starts a new deployment.
 
 Publishing tokens signals the configured downstream repositories. Their own workflows and release checks determine when applications receive the update; publishing tokens does not prove a production deployment or component parity.
+
+## Publishing under the organization
+
+The GitHub workflow `.github/workflows/publish.yml` uses npm trusted publishing
+(OIDC). Configure it on the **new scoped token package**, with organization
+`norwegianredcross`, repository `design-tokens`, workflow `publish.yml`, and
+permission for `npm publish`. The job already requests `id-token: write`; it uses
+a pinned npm CLI supporting OIDC and no personal `NPM_TOKEN`. The old package's
+trusted publisher does not authorize this package.
+
+The initial scoped package publication needs an npm account allowed to create
+packages in the organization. After it exists, configure its trusted publisher.
+Complete the first successful workflow publication within npm's two-day setup
+window, or recreate an expired configuration. See
+[npm trusted publishing](https://docs.npmjs.com/trusted-publishers/).
+
+Publish tokens before updating the design system's registry lockfile and releasing
+that package from Azure. Its Azure pipeline uses an npm publishing credential;
+npm's supported OIDC providers currently do not include Azure Pipelines. Configure
+that credential through the organization's release-secret management. Do not
+remove access to or deprecate the old packages until the scoped packages are
+available and a clean registry consumer installation has passed.

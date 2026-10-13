@@ -2,7 +2,7 @@
   "konferansesenter": {
     "font-family": {
       "$type": "fontFamilies",
-      "$value": "Source Sans 3"
+      "$value": "\"Source Sans 3\""
     },
     "font-weight": {
       "medium": {
@@ -20,6 +20,18 @@
       "bold": {
         "$type": "fontWeights",
         "$value": "Bold"
+      },
+      "regular-italic": {
+        "$type": "fontWeights",
+        "$value": "Italic"
+      },
+      "medium-italic": {
+        "$type": "fontWeights",
+        "$value": "Medium Italic"
+      },
+      "bold-italic": {
+        "$type": "fontWeights",
+        "$value": "Bold Italic"
       }
     },
     "italic": {

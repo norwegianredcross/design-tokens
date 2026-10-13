@@ -829,6 +829,18 @@
     "bold": {
       "$type": "fontWeights",
       "$value": "{theme.font-weight.bold}"
+    },
+    "regular-italic": {
+      "$type": "fontWeights",
+      "$value": "{theme.font-weight.regular-italic}"
+    },
+    "medium-italic": {
+      "$type": "fontWeights",
+      "$value": "{theme.font-weight.medium-italic}"
+    },
+    "bold-italic": {
+      "$type": "fontWeights",
+      "$value": "{theme.font-weight.bold-italic}"
     }
   },
   "border-radius": {

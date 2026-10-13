@@ -33,7 +33,7 @@ const tokenMap = {
 
 // --- Main Build Function ---
 async function build() {
-  const sourceCssPath = path.join('design-tokens-build', 'digdir', 'theme.css');
+  const sourceCssPath = path.join('design-tokens-build', 'theme.css');
   const outputScssPath = path.join('design-tokens-build', 'bootstrap-theme.scss');
 
   if (!fs.existsSync(sourceCssPath)) {

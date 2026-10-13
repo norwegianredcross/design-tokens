@@ -1,7 +1,11 @@
 {
-  "name": "rk-design-tokens",
+  "name": "@norwegianredcross/design-tokens",
   "version": "1.0.50",
   "description": "Design tokens for the Røde Kors design system.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norwegianredcross/design-tokens.git"
+  },
   "style": "design-tokens-build/theme.css",
   "files": [
     "design-tokens-build/",
@@ -9,16 +13,17 @@
   ],
   "scripts": {
     "create:tokens": "designsystemet tokens create --config designsystemet.config.json",
-    "build:tokens": "designsystemet tokens build --config designsystemet.config.json --out-dir design-tokens-build/digdir && cp styles/theme.css styles/konferansesenter.css styles/figma.css design-tokens-build/ && cp design-tokens-build/digdir/*.d.ts design-tokens-build/",
+    "build:tokens": "designsystemet tokens build --config designsystemet.config.json --out-dir design-tokens-build --clean && node scripts/build-size-values.js",
     "build:bootstrap": "node build-bootstrap.js",
     "build:shadcn": "node build-shadcn.js",
     "build:metadata": "node build-metadata.js",
-    "build:dist": "cp designsystemet.config.json design-tokens-build/designsystemet.config.json && cp design-tokens-build/theme.css dist/brand-1.css && cp -R design-tokens-build/digdir dist/ && cp design-tokens-build/figma.css design-tokens-build/shadcn-theme.css design-tokens-build/types.d.ts design-tokens-build/colors.d.ts dist/",
+    "build:dist": "node scripts/build-dist.js",
     "build": "npm run build:tokens && npm run build:bootstrap && npm run build:shadcn && npm run build:metadata && npm run build:dist",
     "test": "node --test test/*.test.js"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@digdir/designsystemet": "1.18.0",

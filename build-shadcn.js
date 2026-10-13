@@ -58,7 +58,7 @@ function parseCssVariables(cssBlock) {
 function transformTokens() {
   console.log('🚀 Starting token transformation...');
 
-  const inputPath = path.join(__dirname, 'design-tokens-build', 'digdir', 'theme.css');
+  const inputPath = path.join(__dirname, 'design-tokens-build', 'theme.css');
   const outputPath = path.join(__dirname, 'design-tokens-build', 'shadcn-theme.css');
 
   if (!fs.existsSync(inputPath)) {
