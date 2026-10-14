@@ -1,5 +1,15 @@
 # Røde Kors Design Tokens
 
+> [!IMPORTANT]
+> **This repository has moved to Azure DevOps and is archived here.**
+> Code, pull requests and releases now live in
+> [RedCrossNorway / DesignPlatform / design-tokens](https://dev.azure.com/RedCrossNorway/DesignPlatform/_git/design-tokens).
+> The package is published as
+> [`@norwegianredcross/design-tokens`](https://www.npmjs.com/package/@norwegianredcross/design-tokens)
+> (formerly `rk-design-tokens`). The theme CSS is on npm's CDN:
+> `https://cdn.jsdelivr.net/npm/@norwegianredcross/design-tokens/design-tokens-build/theme.css`.
+> Nothing here is updated any more.
+
 ## Source of truth and building
 
 The authoritative design is [Figma Components — Main](https://www.figma.com/design/zCMN259qfgUaA5zTAXq5hQ/02.-Components), read through Figma MCP and revalidated on 2026-10-10.
